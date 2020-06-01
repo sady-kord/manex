@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="label" format="string" />
+    <attr name="value" format="string" />
+
+    <declare-styleable name="TextInputLayoutControl">
+        <attr name="hint" format="string" />
+        <attr name="value" />
+        <attr name="helperText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TextInputLayoutProfileControl">
+        <attr name="hintText" format="string" />
+        <attr name="value" />
+        <attr name="pic" format="reference" />
+        <attr name="boxBackground" format="reference" />
+        <attr name="helpText" format="string" />
+        <attr name="isBirthday" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LabelValueView">
+        <attr name="label" />
+        <attr name="value" />
+        <attr name="android:textSize" format="reference" />
+        <attr name="android:textColor" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CityItemControl">
+        <attr name="city_name" format="string"/>
+        <attr name="active" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ListFeatureControl">
+        <attr name="showSort" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="HomeListHeaderControl">
+        <attr name="showMore" format="boolean" />
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Offer724Control">
+        <attr name="title_card" format="string" />
+        <attr name="sub_title_card" format="string" />
+        <attr name="icon_res" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchInput">
+        <attr name="android:text"/>
+        <attr name="icon" format="reference"/>
+        <attr name="message" format="string"/>
+        <attr name="initialMessageState" format="enum">
+            <enum name="dim" value="0"/>
+            <enum name="success" value="1"/>
+            <enum name="error" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="VerificationCodeInput">
+        <attr name="codeLenght" format="integer" />
+        <attr name="selectedItemBackground" format="reference"/>
+        <attr name="unselectedItemBackground" format="reference"/>
+        <attr name="selectedItemTextColor" format="reference"/>
+        <attr name="unselectedItemTextColor" format="reference"/>
+        <attr name="errorBackgroundDrawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="NumberedTextList">
+        <attr name="android:text" format="string"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="indicatorType" format="enum">
+            <enum name="number" value="0"/>
+            <enum name="bullet" value="1"/>
+        </attr>
+        <attr name="indicatorColor" format="reference" />
+        <attr name="indicatorSeparator" format="string"/>
+        <attr name="textMargin" format="dimension"/>
+        <attr name="itemMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TicketView">
+        <attr name="ticketOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="ticketBackground" format="reference"/>
+        <attr name="ticketBackgroundColor" format="color" />
+        <attr name="ticketScallopRadius" format="dimension" />
+        <attr name="ticketScallopPositionPercent" format="float" />
+        <attr name="ticketShowBorder" format="boolean" />
+        <attr name="ticketBorderWidth" format="dimension" />
+        <attr name="ticketBorderColor" format="color" />
+        <attr name="ticketShowDivider" format="boolean" />
+        <attr name="ticketDividerWidth" format="dimension" />
+        <attr name="ticketDividerPadding" format="dimension" />
+        <attr name="ticketDividerColor" format="color" />
+        <attr name="ticketDividerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dash" value="1" />
+        </attr>
+        <attr name="ticketDividerDashGap" format="dimension" />
+        <attr name="ticketDividerDashLength" format="dimension" />
+        <attr name="ticketCornerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="rounded" value="1" />
+            <enum name="scallop" value="2" />
+        </attr>
+        <attr name="ticketCornerRadius" format="dimension" />
+        <attr name="android:elevation" />
+        <attr name="ticketElevation" format="dimension" />
+    </declare-styleable>
+
+</resources>
+

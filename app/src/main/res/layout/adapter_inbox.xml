@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.baman.manex.ui.profile.inbox.InboxDto" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_inbox_adapter">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow_image"
+                    android:layout_width="12dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dimen_small"
+                    android:rotation="270"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_arrow" />
+
+            <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"
+                    android:layout_toStartOf="@id/arrow_image"
+                    android:background="@color/inbox_divider" />
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/view"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan_regular"
+                        android:text="۱۰ منکس هدیه با خرید از دستگاه کارت‌خوان"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginBottom="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan_light"
+                        android:text="۱۳ آبان ۱۳۹۸، ساعت ۱۳:۳۰"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.baman.manex.controls.NumberedTextList
+                android:id="@+id/numberedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:textColor="@color/colorTextPrimary"
+                android:visibility="gone"
+                app:indicatorColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+</layout>

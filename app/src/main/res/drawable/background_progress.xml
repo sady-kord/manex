@@ -1,0 +1,29 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <corners
+                android:bottomRightRadius="6dp"
+                android:bottomLeftRadius="0dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"/>
+
+            <solid android:color="#4c1e4ed1"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <shape>
+                <corners
+                    android:bottomRightRadius="6dp"
+                    android:bottomLeftRadius="0dp"
+                    android:topLeftRadius="0dp"
+                    android:topRightRadius="6dp"/>
+                <solid android:color="#1e4ed1"/>
+            </shape>
+        </scale>
+
+    </item>
+
+</layer-list>

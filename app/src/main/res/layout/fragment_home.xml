@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--        region video-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="false"
+                    app:title="@string/introduce_manex_video" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/videoPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium"
+                    android:layout_marginBottom="@dimen/dimen_large"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="160dp"
+                            android:layout_height="96dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/cover_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="false"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/video_sample" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dimen_small"
+                                android:layout_marginTop="@dimen/dimen_small"
+                                android:layout_marginEnd="@dimen/dimen_small"
+                                android:fontFamily="@font/iranyekan"
+                                android:gravity="center"
+                                android:text="@string/show_video"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dimen_small"
+                                android:layout_marginTop="@dimen/dimen_small"
+                                android:layout_marginEnd="@dimen/dimen_small"
+                                android:fontFamily="@font/iranyekan_light"
+                                android:gravity="center"
+                                android:text="@string/show_video_subtitle"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="12sp" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="@dimen/dimen_medium"
+                                android:layerType="software"
+                                android:src="@drawable/dashed_line_background_view" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dimen_medium"
+                                android:layout_marginTop="@dimen/dimen_small"
+                                android:layout_marginEnd="@dimen/dimen_medium"
+                                android:layout_marginBottom="@dimen/dimen_small"
+                                android:fontFamily="@font/iranyekan_bold"
+                                android:gravity="center"
+                                android:text="@string/show_video_manex"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--        region manex plus-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:id="@+id/offer_manex_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="true"
+                    app:title="@string/manex_plus_offers" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    android:weightSum="4"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/manex_plus_card"
+                        layout="@layout/layout_ticket_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:layout_weight="1.2" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.8"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_small"
+                        android:weightSum="2"
+                        android:layout_marginBottom="13dp">
+
+                        <include
+                            android:id="@+id/manex_plus_card_3"
+                            layout="@layout/layout_ticket_mid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginEnd="@dimen/dimen_small"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/manex_plus_card_2"
+                            layout="@layout/layout_ticket_mid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:layout_weight="1" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--region voucher-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:id="@+id/offer_voucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="true"
+                    app:title="@string/offer_voucher" />
+
+                <include
+                    layout="@layout/adapter_voucher_code_item_mock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp" />
+
+                <include
+                    layout="@layout/adapter_voucher_code_item_mock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp" />
+
+                <include
+                    layout="@layout/adapter_voucher_code_item_mock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="@dimen/dimen_large" />
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--        region manexstore-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:id="@+id/offer_manex_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="true"
+                    app:title="@string/offer_store_manex" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_manex_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_large"
+                    android:paddingStart="@dimen/dimen_medium"
+                    android:paddingEnd="@dimen/dimen_medium" />
+
+
+            </LinearLayout>
+
+            <!--        endregion -->
+
+            <!--        region addcard-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:id="@+id/add_card_suggestion_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="false"
+                    app:title="@string/offer_add_card" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    android:weightSum="4"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/add_card_home"
+                        layout="@layout/layout_ticket_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_small"
+                        android:paddingBottom="@dimen/dimen_medium"
+                        android:weightSum="2"
+                        android:layout_weight="2.8">
+
+                        <include
+                            android:id="@+id/add_card_home_right"
+                            layout="@layout/layout_ticket_mid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginEnd="@dimen/dimen_small"
+                            android:layout_weight="1"/>
+
+                        <include
+                            android:id="@+id/add_card_home_left"
+                            layout="@layout/layout_ticket_mid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:layout_weight="1" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--        region 724-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="false"
+                    app:title="@string/offer_724" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:layout_marginBottom="@dimen/dimen_medium"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <com.baman.manex.controls.Offer724Control
+                        android:id="@+id/card_724_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:icon_res="@drawable/ic_buy_charge"
+                        app:sub_title_card="۵"
+                        app:title_card="@string/buy_charge" />
+
+                    <com.baman.manex.controls.Offer724Control
+                        android:id="@+id/card_724_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:icon_res="@drawable/ic_pay_bill"
+                        app:sub_title_card="۳"
+                        app:title_card="@string/pay_bill" />
+
+                    <com.baman.manex.controls.Offer724Control
+                        android:id="@+id/card_724_3"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:icon_res="@drawable/ic_buy_internet"
+                        app:sub_title_card="۵"
+                        app:title_card="@string/buy_internet" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--       region latest buy-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:id="@+id/last_shopping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="true"
+                    app:title="@string/latest_buy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/adapter_my_voucher_mock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <include
+                        layout="@layout/adapter_my_manex_store_mock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/adapter_my_voucher_mock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_large" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--        endregion-->
+
+            <!--        region latest transaction-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.baman.manex.controls.HomeListHeaderControl
+                    android:id="@+id/last_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:showMore="true"
+                    app:title="@string/latest_transaction" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/adapter_my_transaction_mock" />
+
+                    <include layout="@layout/adapter_my_transaction_mock" />
+
+                    <include
+                        layout="@layout/adapter_my_transaction_mock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_large" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+
+                android:background="@drawable/background_servicedetail_bigdivider" />
+
+            <!--        endregion-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

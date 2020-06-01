@@ -1,0 +1,179 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+apply plugin: 'kotlin-allopen'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+allOpen {
+    annotation 'com.baman.manex.testing.OpenClass'
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('../manex.jks')
+            storePassword 'Manex123456'
+            keyAlias = 'manex'
+            keyPassword 'Manex123456'
+        }
+    }
+
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        applicationId "com.baman.manex"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode build_versions.versionCode
+        versionName build_versions.versionName
+        signingConfig signingConfigs.release
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "com.baman.manex.util.ManexTestRunner"
+
+        buildConfigField "String", "BASE_URL_TEST", "\"https://test.api.manexapp.com/\""
+
+        buildConfigField "String", "BASE_URL_API", "\"https://api.manexapp.com/\""
+
+        buildConfigField "String", "BASE_URL_PAY", "\"https://pay.manexapp.com/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    sourceSets {
+        androidTest.java.srcDirs += "src/test-common/java"
+        test.java.srcDirs += "src/test-common/java"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":flashbar")
+    implementation project(":vlayout")
+    implementation project(":matisse")
+    implementation project(":otpview")
+
+
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.kotlin.stdlib
+    implementation deps.support.core_ktx
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.java8
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.gson
+    implementation deps.glide.runtime
+    implementation deps.glide.integration
+    implementation deps.vectordrawable
+    implementation deps.gms.vision
+    implementation deps.gms.location
+    implementation deps.gms.maps
+    implementation deps.gms.identity_service
+    implementation deps.gms.auth
+    implementation deps.gms.auth_phone
+    implementation deps.zxing
+    implementation deps.permissionhelper
+    implementation deps.osmandroid
+    implementation deps.multidex
+    implementation deps.room.runtime
+    implementation deps.androidsvg
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    implementation deps.constraint_layout
+    implementation deps.mkloader
+    implementation deps.timber
+    implementation deps.firebase.core
+    implementation deps.firebase.analytics
+    implementation deps.firebase.auth
+    implementation deps.firebase.message
+    implementation deps.firebase.crash
+    implementation deps.magical_notifier
+    implementation deps.circle_progress
+
+    implementation deps.floating_action_button
+    implementation deps.date_picker_dialog
+    implementation deps.floating_action_button_jeddi
+    implementation deps.multi_slider
+    implementation deps.swipe_refresh_layout
+    implementation deps.range_seekbar
+    implementation deps.exo
+    implementation deps.gallery_view
+    implementation deps.gallery_view_glide
+
+    implementation deps.skeleton
+    implementation deps.shimmer
+    implementation deps.page_indicator
+    implementation deps.lottie
+    implementation deps.localbroadcast
+    implementation deps.ticket_view
+    implementation deps.arclayout
+
+ //   implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
+
+    kapt deps.dagger.android_support_compiler
+    kapt deps.dagger.compiler
+    kapt deps.room.compiler
+    kapt deps.lifecycle.compiler
+    kapt deps.glide.compiler
+
+    testImplementation deps.junit
+    testImplementation deps.mock_web_server
+    testImplementation deps.arch_core.testing
+    testImplementation deps.mockito.core
+
+    androidTestImplementation deps.atsl.core
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+
+    androidTestImplementation deps.support.app_compat
+    androidTestImplementation deps.support.recyclerview
+    androidTestImplementation deps.support.cardview
+    androidTestImplementation deps.support.design
+
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+
+    androidTestImplementation deps.arch_core.testing
+    androidTestImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+
+}
+
+repositories {
+    google()
+}
+apply plugin: 'com.google.gms.google-services'

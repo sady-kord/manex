@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <com.baman.manex.controls.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        <include
+                android:id="@+id/no_data_found_layout"
+                layout="@layout/layout_no_data_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        <com.baman.manex.controls.CustomRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_above="@+id/button_layout"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/dimen_medium"
+            />
+
+        <RelativeLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="3dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/button_single"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimen_medium"
+                    android:background="@drawable/background_button_details"
+                    android:fontFamily="@font/iranyekan_bold"
+                    android:gravity="center"
+                    android:text="@string/add_card"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

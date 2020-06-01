@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="20sp"
+
+                        tools:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/subtitle_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/iranyekan"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small"
+
+                            tools:text="امکان استفاده در ۲۰ سفر" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+
+                    android:background="@drawable/background_servicedetail_bigdivider" />
+
+                <LinearLayout
+                    android:id="@+id/condition_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/gift_card_term_of_use"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <com.baman.manex.controls.NumberedTextList
+                        android:id="@+id/voucher_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:layout_marginBottom="@dimen/dimen_small"
+                        app:indicatorType="bullet"
+                        android:textSize="@dimen/font_size_small"
+                        android:textColor="@color/colorTextPrimary"/>
+
+                </LinearLayout>
+
+                <com.baman.manex.controls.TickTextList
+                    android:id="@+id/tick_text_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_servicedetail_bigdivider"
+                    android:paddingTop="@dimen/dimen_small"
+                    android:paddingBottom="@dimen/dimen_medium"
+                    android:layout_marginBottom="80dp"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+<!--        <include-->
+<!--            android:id="@+id/bottom_sheet"-->
+<!--            layout="@layout/layout_purchase_bottom_sheet"/>-->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.baman.manex.controls.NumberedTextList
+            android:id="@+id/numberedText"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextPrimary"/>
+
+        <RelativeLayout
+            android:id="@+id/show_more_info_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_opacity" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:layout_marginBottom="@dimen/dimen_small"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow_image"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dimen_extra_small"
+                    app:srcCompat="@drawable/ic_expand" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_showmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/iranyekan"
+                    android:text="@string/specifications_showmore_title"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

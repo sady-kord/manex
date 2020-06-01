@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "530836770407",
+    "firebase_url": "https://manexapp-de8fd.firebaseio.com",
+    "project_id": "manexapp-de8fd",
+    "storage_bucket": "manexapp-de8fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530836770407:android:b7c713e0950e521fe6cec2",
+        "android_client_info": {
+          "package_name": "com.baman.manex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530836770407-3r18r1be7b077a0b58arl3ttlhha6g42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.baman.manex",
+            "certificate_hash": "ff26d6bfb6be520640ab5c08188d670589e041d9"
+          }
+        },
+        {
+          "client_id": "530836770407-pfkpvk19r70ai3f4oh17bjkvhc9lit77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8gstUKfUK36stDYBGGjbqZJsKRwFrPlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530836770407-pfkpvk19r70ai3f4oh17bjkvhc9lit77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

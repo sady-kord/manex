@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_navigation.xml"
+        app:startDestination="@id/earnFragment">
+
+    <!--    region Empty Fragment-->
+
+    <fragment
+        android:id="@+id/destination_main"
+        android:name="com.baman.manex.ui.home.HomeFragment" >
+
+        <action android:id="@+id/add_card"
+            app:destination="@id/destination_add_card"/>
+
+        <action android:id="@+id/manex_plus"
+            app:destination="@id/destination_manex_plus"/>
+
+        <action
+            android:id="@+id/manexStore"
+            app:destination="@id/burnStoreManexFragment" />
+
+        <action
+            android:id="@+id/burnVoucher"
+            app:destination="@id/burnVoucherFragment" />
+
+        <action
+            android:id="@+id/lastShopping"
+            app:destination="@id/destination_my_shopping" />
+
+        <action
+            android:id="@+id/lastTransaction"
+            app:destination="@id/destination_mytransaction" />
+
+        <action
+            android:id="@+id/home_search"
+            app:destination="@id/destination_home_search" />
+
+    </fragment>
+
+    <!--    endregion-->
+
+    <!--    region Earn Fragment-->
+
+    <fragment
+        android:id="@+id/earnFragment"
+        android:name="com.baman.manex.ui.earn.EarnFragment">
+
+        <action
+            android:id="@+id/localStore"
+            app:destination="@id/earnLocalStoreFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/voucherFragment"
+            app:destination="@id/earnVoucherFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/voucherDetail"
+            app:destination="@id/earn_voucher_detail_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/showLocalStoreDetail"
+            app:destination="@id/earnLocalStoreDetail" />
+
+        <action
+            android:id="@+id/addCard"
+            app:destination="@id/destination_add_card"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/earnLocalStoreFragment"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.EarnLocalStoreFragment">
+        <!--        <argument-->
+        <!--            android:name="filterEarnOffline"-->
+        <!--            app:argType="com.baman.manex.data.dto.FilterRequestDto"-->
+        <!--            app:nullable="true" />-->
+        <action
+            android:id="@+id/search"
+            app:destination="@id/destination_offline_store_search"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/filter"
+            app:destination="@+id/destination_filter_earn_offline"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/showDetails"
+            app:destination="@+id/earnLocalStoreDetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/map"
+            app:destination="@+id/destination_map"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/earnLocalStoreDetail"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.detail.EarnLocalStoreDetailFragment">
+        <action
+                android:id="@+id/addCard"
+                app:destination="@+id/destination_add_card"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="store"
+            app:argType="com.baman.manex.data.dto.StoreInfoDto"
+            app:nullable="false" />
+
+        <argument
+                android:name="source"
+                app:argType="string"
+                app:nullable="true" />
+
+
+        <action
+            android:id="@+id/otherBranch"
+            app:destination="@+id/destination_other_branches"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/showMoreNearBranch"
+            app:destination="@id/destination_showMoreNearBranch"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <!--    endregion-->
+
+    <!--    region Burn Fragment-->
+
+    <fragment
+        android:id="@+id/destination_burn"
+        android:name="com.baman.manex.ui.burn.BurnFragment">
+        <action
+            android:id="@+id/manexStore"
+            app:destination="@id/burnStoreManexFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/burnVoucher"
+            app:destination="@id/burnVoucherFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/voucherDetail"
+            app:destination="@+id/voucher_detail_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/showStoreManexDetail"
+            app:destination="@id/burnStoreManexDetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/onlineStore"
+            app:destination="@id/earnOnlineStoreFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/showOnlineStoreDetail"
+            app:destination="@id/destination_onlineservicedetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/burnStoreManexFragment"
+        android:name="com.baman.manex.ui.burn.burnManexStore.BurnManexStoreFragment">
+        <argument
+            android:name="filterRedeemShop"
+            app:argType="com.baman.manex.data.dto.FilterRequestDto"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/search"
+            app:destination="@id/destination_shop_search"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/filter"
+            app:destination="@+id/destination_filter_redeem_shop"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/showDetails"
+            app:destination="@+id/burnStoreManexDetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/burnVoucherFragment"
+        android:name="com.baman.manex.ui.burn.burnVoucher.BurnVoucherFragment">
+        <argument
+            android:name="filterBurnVoucher"
+            app:argType="com.baman.manex.data.dto.FilterRequestDto"
+            app:nullable="true" />
+        <action
+            android:id="@+id/search"
+            app:destination="@id/dest_giftcard_search"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/filter"
+            app:destination="@+id/destination_filter_redeem_gift_card"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/showDetails"
+            app:destination="@+id/voucher_detail_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+             />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/burnStoreManexDetail"
+        android:name="com.baman.manex.ui.burn.burnManexStore.detail.BurnManexStoreDetailFragment">
+
+        <argument
+            android:name="store"
+            app:argType="com.baman.manex.data.dto.ManexStoreInsideDto"
+            app:nullable="false" />
+
+        <action android:id="@+id/editProfile"
+            app:destination="@id/edit_profile_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/voucher_detail_fragment"
+        android:name="com.baman.manex.ui.burn.burnVoucher.detail.BurnVoucherDetailFragment">
+        <argument
+            android:name="store"
+            app:argType="com.baman.manex.data.dto.VoucherInsideDto"
+            app:nullable="false" />
+        <action
+            android:id="@+id/purchase"
+            app:destination="@+id/destination_purchase_voucher_detail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <!--    endregion-->
+
+    <!--   region Online Service-->
+
+    <fragment
+        android:id="@+id/earnOnlineStoreFragment"
+        android:name="com.baman.manex.ui.onlineService.OnlineServiceFragment">
+        <argument
+            android:name="isEarn"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/showOnlineStoreDetail"
+            app:destination="@id/destination_onlineservicedetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_onlineservicedetail"
+        android:name="com.baman.manex.ui.onlineService.detail.OnlineServiceDetailFragment">
+        <argument
+            android:name="storeInfo"
+            app:argType="com.baman.manex.data.dto.StoreInfoDto"
+            app:nullable="false" />
+        <argument
+            android:name="isEarn"
+            app:argType="boolean" />
+    </fragment>
+
+    <!--    endregion-->
+
+    <!--    region Profile Fragment-->
+
+    <fragment
+        android:id="@+id/destination_profile"
+        android:name="com.baman.manex.ui.profile.ProfileFragment">
+        <action
+            android:id="@+id/editProfile"
+            app:destination="@+id/edit_profile_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/add_card"
+            app:destination="@+id/destination_add_card"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/myShopping"
+            app:destination="@+id/destination_my_shopping"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/myTransaction"
+            app:destination="@+id/destination_mytransaction"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/setting"
+            app:destination="@+id/destination_setting" />
+
+        <action
+            android:id="@+id/myCards"
+            app:destination="@+id/destination_my_cards"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/inviteFriend"
+            app:destination="@+id/destination_invite_friend"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/about"
+            app:destination="@id/destination_about_manex"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/terms"
+            app:destination="@+id/destination_terms_and_condition"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/cooperation"
+            app:destination="@id/destination_cooperation_request"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/inbox"
+            app:destination="@id/destination_inbox"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/manexPlus"
+            app:destination="@id/destination_manex_plus"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/help_and_questions"
+            app:destination="@id/destination_help_and_questions"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/waiting_manex"
+            app:destination="@+id/destination_waiting_manex"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/edit_profile_fragment"
+        android:name="com.baman.manex.ui.profile.editProfile.EditProfileFragment"/>
+
+    <fragment
+        android:id="@+id/destination_mytransaction"
+        android:name="com.baman.manex.ui.profile.myTransaction.MyTransactionFragment">
+        <action
+            android:id="@+id/search"
+            app:destination="@+id/destination_transaction_search"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/filter"
+            app:destination="@+id/destination_my_transaction_filter"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <!--endregion-->
+
+    <!--region Search fragments -->
+
+    <fragment
+        android:id="@+id/destination_offline_store_search"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.search.EarnLocalStoreSearchFragment">
+
+
+        <action
+            android:id="@id/showDetails"
+            app:destination="@+id/earnLocalStoreDetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_giftcard_search"
+        android:name="com.baman.manex.ui.burn.burnVoucher.search.BurnVoucherSearchFragment">
+
+        <action
+            android:id="@id/showDetails"
+            app:destination="@+id/voucher_detail_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_shop_search"
+        android:name="com.baman.manex.ui.burn.burnManexStore.search.BurnManexStoreSearchFragment">
+
+
+        <action
+            android:id="@id/showDetails"
+            app:destination="@+id/burnStoreManexDetail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_transaction_search"
+        android:name="com.baman.manex.ui.profile.myTransaction.search.MyTransactionSearchFragment" />
+
+
+    <!--endregion-->
+
+    <!--   region Filter Fragment-->
+
+    <fragment
+        android:id="@+id/destination_filter_redeem_gift_card"
+        android:name="com.baman.manex.ui.burn.burnVoucher.filter.BurnVoucherFilterFragment"></fragment>
+
+    <fragment
+        android:id="@+id/destination_filter_redeem_shop"
+        android:name="com.baman.manex.ui.burn.burnManexStore.filter.BurnManexStoreFilterFragment"></fragment>
+
+    <fragment
+        android:id="@+id/destination_filter_earn_offline"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.filter.EarnLocalStoreFilterFragment"></fragment>
+
+    <fragment
+        android:id="@+id/destination_my_transaction_filter"
+        android:name="com.baman.manex.ui.profile.myTransaction.filter.MyTransactionFilterFragment" />
+
+    <!--    endregion-->
+
+    <fragment
+            android:id="@+id/earn_voucher_detail_fragment"
+            android:name="com.baman.manex.ui.earn.earnVoucher.detail.EarnVoucherDetailFragment">
+
+        <argument
+                android:name="store"
+                app:argType="com.baman.manex.data.dto.VoucherInsideDto"
+                app:nullable="false" />
+
+        <action
+                android:id="@+id/purchase"
+                app:destination="@+id/destination_purchase_voucher_detail"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/destination_filter_earn_gift_card"
+            android:name="com.baman.manex.ui.earn.earnVoucher.filter.EarnVoucherFilterFragment"/>
+
+    <fragment
+            android:id="@+id/dest_giftcard_earn_search"
+            android:name="com.baman.manex.ui.earn.earnVoucher.search.EarnVoucherSearchFragment">
+
+        <action
+                android:id="@id/showDetails"
+                app:destination="@+id/earn_voucher_detail_fragment"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/earnVoucherFragment"
+            android:name="com.baman.manex.ui.earn.earnVoucher.EarnVoucherFragment">
+
+        <argument
+                android:name="filterBurnVoucher"
+                app:argType="com.baman.manex.data.dto.FilterRequestDto"
+                app:nullable="true" />
+
+        <action
+                android:id="@+id/search"
+                app:destination="@id/dest_giftcard_earn_search"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out" />
+
+        <action
+                android:id="@+id/filter"
+                app:destination="@+id/destination_filter_earn_gift_card"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out" />
+
+        <action
+                android:id="@+id/showDetails"
+                app:destination="@+id/earn_voucher_detail_fragment"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out"
+                />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/destination_cities"
+        android:name="com.baman.manex.ui.profile.setting.cities.CitiesFragment" />
+
+    <fragment
+        android:id="@+id/destination_add_card"
+        android:name="com.baman.manex.ui.profile.addCard.AddCardFragment"/>
+
+    <fragment
+        android:id="@+id/destination_setting"
+        android:name="com.baman.manex.ui.profile.setting.SettingFragment">
+
+        <action
+            android:id="@+id/cities"
+            app:destination="@+id/destination_cities"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_purchase_voucher_detail"
+        android:name="com.baman.manex.ui.burn.burnVoucher.purchase.PurchaseVoucherDetailFragment">
+        <argument
+            android:name="storeId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_my_cards"
+        android:name="com.baman.manex.ui.profile.myCards.MyCardsFragment">
+
+        <action
+            android:id="@+id/addCard"
+            app:destination="@+id/destination_add_card"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_invite_friend"
+        android:name="com.baman.manex.ui.profile.inviteFriend.InviteFriendFragment" />
+
+    <fragment
+        android:id="@+id/destination_other_branches"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.detail.OtherBranches.OtherBranchesFragment">
+        <argument
+            android:name="otherBranch"
+            app:argType="com.baman.manex.data.dto.StoreInfoDto"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_showMoreNearBranch"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.detail.nearBranch.NearBranchListFragment">
+        <argument
+            android:name="storeInfo"
+            app:argType="com.baman.manex.data.dto.StoreInfoDto"
+            app:nullable="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_about_manex"
+        android:name="com.baman.manex.ui.profile.about.AboutManexFragment">
+        <action
+            android:id="@+id/terms"
+            app:destination="@+id/destination_terms_and_condition"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/home"
+            app:destination="@+id/earnFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_terms_and_condition"
+        android:name="com.baman.manex.ui.profile.terms.TermsAndConditionFragment" />
+
+    <fragment
+        android:id="@+id/destination_cooperation_request"
+        android:name="com.baman.manex.ui.profile.cooperationRequest.CooperationRequestFragment" />
+
+    <fragment
+        android:id="@+id/destination_inbox"
+        android:name="com.baman.manex.ui.profile.inbox.InboxFragment" />
+
+    <fragment
+        android:id="@+id/destination_faq"
+        android:name="com.baman.manex.ui.profile.faq.FaqFragment" >
+
+        <argument android:name="type"
+            app:argType="com.baman.manex.data.model.FaqType"
+            app:nullable="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_manex_plus"
+        android:name="com.baman.manex.ui.profile.manexPlus.ManexPlusFragment" />
+
+    <fragment
+        android:id="@+id/destination_map"
+        android:name="com.baman.manex.ui.earn.earnLocalStore.map.MapFragment">
+
+        <action
+            android:id="@+id/search"
+            app:destination="@id/destination_offline_store_search"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/filter"
+            app:destination="@+id/destination_filter_earn_offline" />
+
+        <action
+            android:id="@+id/list"
+            app:destination="@+id/earnLocalStoreFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_help_and_questions"
+        android:name="com.baman.manex.ui.profile.helpAndQuestions.HelpAndQuestionsFragment">
+
+        <action
+            android:id="@+id/faq"
+            app:destination="@id/destination_faq"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/slide_from_right"
+            app:popExitAnim="@anim/slide_to_left" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_waiting_manex"
+        android:name="com.baman.manex.ui.profile.waitingManex.WaitingManexFragment"/>
+
+    <fragment
+        android:id="@+id/destination_home_search"
+        android:name="com.baman.manex.ui.home.search.HomeSearchFragment">
+
+        <action
+            android:id="@+id/showDetailsStoreManex"
+            app:destination="@+id/burnStoreManexDetail" />
+
+        <action
+            android:id="@+id/showDetailsVoucher"
+            app:destination="@+id/voucher_detail_fragment"/>
+
+        <action
+            android:id="@+id/showDetailsLocalStore"
+            app:destination="@+id/earnLocalStoreDetail"/>
+
+        <action
+            android:id="@+id/showDetailsOnlineStore"
+            app:destination="@id/destination_onlineservicedetail"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_my_shopping"
+        android:name="com.baman.manex.ui.profile.myShopping.MyShoppingFragment">
+        <action
+            android:id="@+id/purchase"
+            app:destination="@+id/destination_purchase_voucher_detail"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.baman.manex.data.dto.VoucherInsideDto" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_extra_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/item_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/dimen_small"
+                        android:src="@drawable/logo_724" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_opacity" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_small"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/iranyekan"
+                                    android:maxLines="1"
+                                    android:text="کارت هدیه ۴۰ هزارتومانی"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:textSize="@dimen/font_size_small"
+                                    app:autoSizeMaxTextSize="@dimen/font_size_small"
+                                    app:autoSizeMinTextSize="8sp"
+                                    app:autoSizeTextType="uniform" />
+
+
+                                <TextView
+                                    android:id="@+id/text_subtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/iranyekan_light"
+                                    android:gravity="start"
+                                    android:maxLines="1"
+                                    android:text="امکان استفاده در ۲۰ سفر"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:textSize="10sp"
+                                    android:layout_marginTop="@dimen/dimen_small"
+                                    app:autoSizeMaxTextSize="@dimen/font_size_small"
+                                    app:autoSizeMinTextSize="8sp"
+                                    app:autoSizeTextType="uniform" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="@dimen/dimen_extra_small"
+                                android:layout_marginEnd="@dimen/dimen_extra_small"
+                                android:layerType="software"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/dashed_line_background_vertical" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/dimen_small"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/text_manex_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="2dp"
+                                        android:fontFamily="@font/iranyekan_bold"
+                                        android:gravity="center"
+                                        android:textColor="@color/adaptertem_manexcount_textcolor_completed"
+                                        android:maxLines="1"
+                                        android:text="۸"
+                                        android:textSize="16sp"/>
+                                    <TextView
+                                        android:id="@+id/text_manex_count_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginStart="2dp"
+                                        android:fontFamily="@font/iranyekan"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="منکس"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/colorTextPrimary"
+                                        app:autoSizeMaxTextSize="10sp"
+                                        app:autoSizeMinTextSize="6sp"
+                                        app:autoSizeTextType="uniform" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="8dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="center"
+                                        app:srcCompat="@drawable/ic_manex_coin" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/text_expire_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:layout_marginTop="@dimen/dimen_small"
+                                    android:fontFamily="@font/iranyekan_light"
+                                    android:gravity="end"
+                                    android:text="معتبر تا ۱۵ بهمن ۹۸"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorTextPrimary"
+                                    app:autoSizeMaxTextSize="10sp"
+                                    app:autoSizeMinTextSize="8sp"
+                                    app:autoSizeTextType="uniform"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_alignParentBottom="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/background_progress_complete" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

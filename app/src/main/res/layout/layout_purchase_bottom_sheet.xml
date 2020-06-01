@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:id="@+id/bottom_sheet_layout"
+    android:layoutDirection="rtl"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_bottom_sheet"
+        android:orientation="vertical"
+        android:foreground="?attr/selectableItemBackground"
+      android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        >
+
+        <TextView
+            android:id="@+id/bottom_sheet_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan_bold"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:drawableStart="@drawable/ic_payment"
+            android:drawablePadding="@dimen/dimen_small"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:gravity="center"
+
+            tools:text="خرید هارداکسترنال وسترن دیجیتال"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bottom_sheet_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan_light"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:lineSpacingExtra="8sp"
+            android:layoutDirection="rtl"
+            android:textDirection="rtl"
+            android:text="حـــــامد عزیز، با خرید این کالا ۱۹۹ منکس از منکس‌های شما کسر خواهد شد و قــــابل بازگشت نیست. آیا از خریــــد خود اطمینــــان دارید؟"/>
+
+        <LinearLayout
+            android:id="@+id/double_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bottom_sheet_confirm_button"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="2"
+                android:background="@drawable/background_button_common"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="بله"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bottom_sheet_cancel_button"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_border_primary_3"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center"
+                android:text="انصراف"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

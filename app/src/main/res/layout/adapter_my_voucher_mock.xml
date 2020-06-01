@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="voucherItem"
+            type="com.baman.manex.data.dto.InvoiceDto" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingTop="@dimen/dimen_extra_small"
+        android:paddingBottom="@dimen/dimen_extra_small"
+        android:paddingStart="@dimen/dimen_medium"
+        android:paddingEnd="@dimen/dimen_medium">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/firstLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/voucher_state"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/earn_color" />
+
+                    <ImageView
+                        android:id="@+id/voucher_image_logo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:src="@drawable/logo_724" />
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:background="@color/my_voucher_divider_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/middle_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_toEndOf="@+id/firstLayout"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/iranyekan"
+                        android:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_small"
+
+                        tools:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iranyekan_light"
+                        android:text="امکان استفاده در ۲۰ سفر"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_extra_small"
+android:layout_marginTop="@dimen/dimen_small"
+                        tools:text="امکان استفاده در ۲۰ سفر" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:layout_toStartOf="@+id/manex_layout"
+                    android:background="@drawable/dashed_line_background_view" />
+
+                <LinearLayout
+                    android:id="@+id/manex_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:textColor="@color/earn_color"
+                            android:textSize="@dimen/font_size_medium"
+
+                            android:text="۸" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:text="@string/manex"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="10dp"
+                            app:srcCompat="@drawable/ic_manex_coin" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="معتبر تا ۲۰ آذر ۸۹"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_extra_small"
+
+                        tools:text="معتبر تا ۲۰ آذر ۸۹" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</layout>

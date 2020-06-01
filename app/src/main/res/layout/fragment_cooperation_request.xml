@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.baman.manex.controls.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_above="@+id/divider">
+
+        <com.baman.manex.controls.TextInputLayoutProfileControl
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small"
+            app:boxBackground="@color/white"
+            app:hintText="@string/editprofile_name"
+            app:pic="@drawable/ic_name" />
+
+        <com.baman.manex.controls.TextInputLayoutProfileControl
+            android:id="@+id/family"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackground="@color/white"
+            android:layout_marginTop="@dimen/dimen_extra_small"
+            app:hintText="@string/editprofile_family" />
+
+        <com.baman.manex.controls.TextInputLayoutProfileControl
+            android:id="@+id/shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackground="@color/white"
+            android:layout_marginTop="@dimen/dimen_small"
+            app:hintText="@string/shop_name"
+            app:pic="@drawable/ic_email" />
+
+        <com.baman.manex.controls.TextInputLayoutProfileControl
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackground="@color/white"
+            android:layout_marginTop="@dimen/dimen_small"
+            app:hintText="@string/phone_number"
+            app:pic="@drawable/ic_phone_office" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_above="@+id/send_request"/>
+
+        <RelativeLayout
+            android:id="@+id/send_request"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:background="@drawable/background_button_details">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/send_request"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.tuyenmonkey.mkloader.MKLoader
+                android:id="@+id/loading"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:mk_color="@color/white"
+                app:mk_type="FishSpinner" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

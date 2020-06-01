@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/Tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabbedlist_tab_height"
+        app:tabIndicatorColor="@color/tabbedlist_tab_indicatorcolor"
+        app:tabSelectedTextColor="@color/tabbedlist_selected_tab_textcolor" />
+
+    <com.baman.manex.controls.CustomRecyclerView
+        android:id="@+id/custom_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/main_recycler_verticalpadding"
+        android:paddingBottom="@dimen/main_recycler_verticalpadding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</merge>

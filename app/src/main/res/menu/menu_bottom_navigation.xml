@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+<!--    <item-->
+<!--        android:id="@+id/destination_main"-->
+<!--        android:icon="@drawable/ic_home_24_px"-->
+<!--        android:title="@string/bottom_nav_item_main" />-->
+
+    <item
+        android:id="@+id/earnFragment"
+        android:icon="@drawable/ic_earn_24_px"
+        android:title="@string/bottom_nav_item_earn" />
+
+    <item
+        android:id="@+id/destination_burn"
+        android:icon="@drawable/ic_redeem_24_px"
+        android:title="@string/bottom_nav_item_burn" />
+
+    <item
+        android:id="@+id/destination_profile"
+        android:icon="@drawable/ic_profile_24_px"
+        android:title="@string/bottom_nav_item_profile" />
+    </group>
+</menu>

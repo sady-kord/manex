@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <com.baman.manex.controls.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:id="@+id/city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_marginTop="@dimen/dimen_medium"
+                    android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="تهران"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+
+                        tools:text="تهران" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:drawableStart="@drawable/ic_my_city"
+                        android:drawablePadding="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="@string/my_city"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:visibility="gone"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:checked="false" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:drawableStart="@drawable/ic_night_mode"
+                        android:drawablePadding="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="@string/night_mode"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+<!--            <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/divider" />-->
+
+<!--            <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/setting_item_height"-->
+<!--                    android:background="@color/white">-->
+
+<!--                <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginEnd="@dimen/dimen_medium"-->
+<!--                        app:srcCompat="@drawable/ic_expand_left" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginStart="@dimen/dimen_medium"-->
+<!--                        android:drawableStart="@drawable/ic_push_notifications"-->
+<!--                        android:drawablePadding="@dimen/dimen_medium"-->
+<!--                        android:fontFamily="@font/iranyekan"-->
+<!--                        android:text="@string/notification_setting"-->
+<!--                        android:textColor="@color/colorTextPrimary"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--            </RelativeLayout>-->
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="۱.۸.۴"
+                        android:textColor="@color/text_opacity"
+                        android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:drawableStart="@drawable/ic_versions"
+                        android:drawablePadding="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="@string/version"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+            <RelativeLayout
+                    android:id="@+id/exit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:drawableStart="@drawable/ic_exit_manex"
+                        android:drawablePadding="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="@string/manex_exit"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

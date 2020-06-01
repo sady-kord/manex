@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include android:id="@+id/toolbar" layout="@layout/show_more_toolbar"/>
+
+        <com.baman.manex.controls.ListFeatureControl
+            android:id="@+id/feature"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+
+<!--        <include android:id="@+id/feature" layout="@layout/list_feature"/>-->
+
+
+        <com.baman.manex.controls.CustomRecyclerView
+            android:id="@+id/customRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="@dimen/dimen_extra_small"
+
+            tools:listitem="@layout/adapter_voucher_code_item"
+            />
+
+    </LinearLayout>
+
+</layout>

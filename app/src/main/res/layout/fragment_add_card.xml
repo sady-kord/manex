@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.baman.manex.controls.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:layout_marginBottom="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/special_offer"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="310dp"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <include
+                            android:id="@+id/addCardBuyManex"
+                            layout="@layout/layout_ticket_full"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:layout_weight="1.2" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2.8"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dimen_small"
+                            android:paddingBottom="@dimen/dimen_medium"
+                            android:weightSum="2">
+
+                            <include
+                                android:id="@+id/ticket_tap30"
+                                layout="@layout/layout_ticket_mid"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/dimen_medium"
+                                android:layout_marginEnd="@dimen/dimen_small"
+                                android:layout_weight="1" />
+
+                            <include
+                                android:id="@+id/ticket_iran_tick"
+                                layout="@layout/layout_ticket_mid"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/dimen_medium"
+                                android:layout_weight="1" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+
+                        android:background="@drawable/background_servicedetail_bigdivider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/app_724"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/buy_charge_card"
+                            style="@style/CardViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginTop="@dimen/dimen_medium"
+                            android:layout_marginBottom="@dimen/dimen_extra_small"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="@dimen/dimen_small"
+                                    app:cardCornerRadius="2dp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#d5016f">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:padding="@dimen/dimen_small"
+                                            app:srcCompat="@drawable/ic_buy_charge" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/gray_opacity" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/iranyekan_bold"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="خرید شارژ"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_small" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dimen_small"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/iranyekan_light"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="همراه‌اول، ایرانسل و…"
+                                        android:textColor="@color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/pay_bill_card"
+                            style="@style/CardViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_small"
+                            android:layout_marginTop="@dimen/dimen_medium"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:layout_marginBottom="@dimen/dimen_extra_small"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="@dimen/dimen_small"
+                                    app:cardCornerRadius="2dp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#d5016f">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:padding="@dimen/dimen_small"
+                                            app:srcCompat="@drawable/ic_pay_bill" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/gray_opacity" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/iranyekan_bold"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="پرداخت قبوض"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_small" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dimen_small"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/iranyekan_light"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="آب، برق، گاز و تلفن"
+                                        android:textColor="@color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/balance_card"
+                            style="@style/CardViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginTop="@dimen/dimen_extra_small"
+                            android:layout_marginBottom="@dimen/dimen_medium"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="@dimen/dimen_small"
+                                    app:cardCornerRadius="2dp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#d5016f">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:padding="@dimen/dimen_small"
+                                            app:srcCompat="@drawable/ic_bank_card" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/gray_opacity" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/iranyekan_bold"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="موجودی کارت"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_small" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dimen_small"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/iranyekan_light"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="کارت‌های بانکی"
+                                        android:textColor="@color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/buy_internet_card"
+                            style="@style/CardViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_small"
+                            android:layout_marginTop="@dimen/dimen_extra_small"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:layout_marginBottom="@dimen/dimen_medium"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="@dimen/dimen_small"
+                                    app:cardCornerRadius="2dp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#d5016f">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:padding="@dimen/dimen_small"
+                                            app:srcCompat="@drawable/ic_buy_internet" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/gray_opacity" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/iranyekan_bold"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="خرید اینترنت"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_small" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dimen_small"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/iranyekan_light"
+                                        android:gravity="start"
+                                        android:maxLines="1"
+                                        android:text="همراه اول ، ایرانسل و…"
+                                        android:textColor="@color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="#eb000000"
+            android:gravity="center"
+            android:padding="@dimen/dimen_medium"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iranyekan_bold"
+                android:gravity="center"
+                android:text="@string/addcard_intro_title"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sub_title_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="@dimen/dimen_extra_large"
+                android:fontFamily="@font/iranyekan"
+                android:gravity="start"
+
+                android:text="@string/addcard_intro_subtitle_1"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sub_title_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_title_1"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:fontFamily="@font/iranyekan"
+                android:gravity="start"
+
+                android:text="@string/addcard_intro_subtitle_2"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/confirm_button"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/sub_title_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_large"
+
+                android:background="@drawable/background_button_details"
+                android:fontFamily="@font/iranyekan"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/dimen_extra_small"
+                android:text="@string/confirm_add_card"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

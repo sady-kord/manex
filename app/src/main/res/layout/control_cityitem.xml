@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/marker"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_marker_details"
+            android:tint="@color/colorTextPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/marker"
+            android:fontFamily="@font/iranyekan"
+            tools:text="تهران"
+            android:layout_marginStart="@dimen/dimen_small"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_radio_uncheck"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_medium"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

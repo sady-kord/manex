@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.baman.manex.data.dto.OnlineStoreInsideDto" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_extra_small"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/dimen_small"
+                    app:srcCompat="@drawable/logo_724" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_opacity" />
+
+                <LinearLayout
+                    android:id="@+id/earn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/earn_text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_small"
+                        app:autoSizeMaxTextSize="@dimen/font_size_small"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeTextType="uniform"
+
+                        tools:text="۱۰۰ هزار تومان" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:gravity="start">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/earn_text_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_toEndOf="@+id/earn_onlineservice_manexcoin_image"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10sp"
+                            app:autoSizeMaxTextSize="10sp"
+                            app:autoSizeMinTextSize="6sp"
+                            app:autoSizeTextType="uniform"
+
+                            tools:text="هر ۱۰ منکس" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/earn_onlineservice_manexcoin_image"
+                            android:layout_width="8dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_manex_coin" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/burn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:gravity="start">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_toEndOf="@+id/onlineservice_manexcoin_image"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10sp"
+                            app:autoSizeMaxTextSize="10sp"
+                            app:autoSizeMinTextSize="6sp"
+                            app:autoSizeTextType="uniform"
+
+                            tools:text="هر ۱۰ منکس" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/onlineservice_manexcoin_image"
+                            android:layout_width="8dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_manex_coin" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_small"
+                        app:autoSizeMaxTextSize="@dimen/font_size_small"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeTextType="uniform"
+
+                        tools:text="۱۰۰ هزار تومان" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

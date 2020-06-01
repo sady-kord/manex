@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="18dp"
+    android:background="@drawable/background_manex_count_green"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:id="@+id/main_layout">
+
+    <TextView
+        android:id="@+id/manex_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/iranyekan_light"
+        android:text="@string/manex"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="10sp"
+        android:layout_marginStart="@dimen/dimen_small"/>
+
+    <LinearLayout
+        android:id="@+id/manex_count_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/manex_label"
+        android:layout_marginStart="@dimen/dimen_extra_small">
+
+        <TextView
+            android:id="@+id/manex_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:fontFamily="@font/iranyekan_bold"
+            android:gravity="center"
+            android:textSize="14sp"
+            tools:text="۸" />
+
+        <ImageView
+            android:id="@+id/manex_status_image"
+            android:layout_width="12sp"
+            android:layout_height="12sp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_manex_count_plus"
+            android:layout_marginEnd="@dimen/dimen_extra_small"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

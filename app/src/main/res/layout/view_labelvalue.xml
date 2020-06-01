@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxWidth="180dp"
+        android:maxLines="1"
+
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:text="عنوان" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_medium"
+        android:layout_marginEnd="@dimen/dimen_small"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="3"
+
+
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textView_label"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+
+        tools:text="مقدار" />
+
+</merge>

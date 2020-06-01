@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="عنوان"
+            android:textSize="@dimen/tabbedlist_title_textsize"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/tabbedlist_title_textcolor"
+            android:fontFamily="@font/iranyekan_bold"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_opacity"
+            android:layout_marginTop="@dimen/dimen_small"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+    </LinearLayout>
+
+</layout>

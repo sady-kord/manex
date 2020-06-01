@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dimen_small"
+        android:layout_marginEnd="@dimen/dimen_small"
+        android:layout_marginBottom="@dimen/dimen_extra_small"
+        android:adjustViewBounds="true" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginEnd="@dimen/dimen_medium">
+
+        <com.baman.manex.controls.CustomTextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:foregroundGravity="bottom"
+            android:gravity="start"
+            android:hint="hello"
+            app:boxBackgroundColor="@color/main_navhost_backgroundcolor"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeColor="#757575"
+
+            app:boxStrokeWidth=".5dp"
+
+            app:boxStrokeWidthFocused=".5dp"
+            app:errorEnabled="true"
+
+            app:errorTextAppearance="@style/ErrorTextAppearance"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperTextAppearance"
+            app:hintTextAppearance="@style/HintInputTextAppearance"
+            app:hintTextColor="#757575">
+
+            <com.baman.manex.controls.ClearableEditText
+                android:id="@+id/clear_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-2dp"
+                android:fontFamily="@font/iranyekan"
+                android:gravity="start"
+                android:lineHeight="@dimen/font_size_medium"
+                android:maxLines="1"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/font_size_medium_1" />
+
+        </com.baman.manex.controls.CustomTextInputLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dedede" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

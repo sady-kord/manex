@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.baman.manex.data.dto.VoucherInsideDto" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_marginBottom="@dimen/dimen_small"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.baman.manex.controls.TicketView
+            android:id="@+id/ticketView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:ticketBackgroundColor="@color/white"
+            app:ticketBorderColor="@color/gray_opacity"
+            app:ticketBorderWidth="0.5dp"
+            app:ticketCornerRadius="4dp"
+            app:ticketCornerType="rounded"
+            app:ticketDividerColor="@color/gray_opacity"
+            app:ticketDividerPadding="0dp"
+            app:ticketDividerType="dash"
+            app:ticketDividerWidth="1dp"
+            app:ticketElevation="3dp"
+            app:ticketOrientation="vertical"
+            app:ticketScallopPositionPercent="30"
+            app:ticketScallopRadius="5dp"
+            app:ticketShowBorder="true"
+            app:ticketShowDivider="true" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <LinearLayout
+            android:id="@+id/first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen_small" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_opacity" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_small"
+            android:layout_marginEnd="@dimen/dimen_small"
+            android:layout_weight="2"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/first_layout"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+           >
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:fontFamily="@font/iranyekan"
+                android:maxLines="1"
+                android:textColor="@color/colorTextPrimary"
+                android:textDirection="rtl"
+                android:textSize="@dimen/font_size_small"
+                tools:text="کارت هدیه ۴۰ هزارتومانی"
+                android:layout_marginTop="11dp"
+              />
+
+            <TextView
+                android:id="@+id/text_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/iranyekan_light"
+                android:maxLines="1"
+                android:textColor="@color/colorTextPrimary"
+                android:textDirection="rtl"
+                android:textSize="10sp"
+
+                tools:text="امکان استفاده در ۲۰ سفر" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimen_small"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.baman.manex.controls.ManexCountLabelControl
+                android:id="@+id/manex_count_control_voucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dimen_small"
+                />
+
+            <TextView
+                android:id="@+id/text_expire_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/iranyekan_light"
+                android:gravity="end"
+                android:text="معتبر تا ۱۵ بهمن ۹۸"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorTextPrimary"
+                app:autoSizeMaxTextSize="10sp"
+                app:autoSizeMinTextSize="8sp"
+                app:autoSizeTextType="uniform"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/background_progress"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/first_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

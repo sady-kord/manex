@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/root_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/back_iamge_toolbar"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_medium"
+                app:srcCompat="@drawable/ic_back_white"
+
+                tools:tint="@color/colorTextPrimary" />
+
+            <ImageView
+                android:id="@+id/share_image_toolbar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                app:srcCompat="@drawable/ic_profile_share" />
+
+        </RelativeLayout>
+
+        <!--        <com.baman.manex.controls.Toolbar-->
+        <!--            android:id="@+id/toolbar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/double_button_layout"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/main_layout_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo_purchase"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    tools:src="@drawable/logo_724" />
+
+                <TextView
+                    android:id="@+id/shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    android:fontFamily="@font/iranyekan_bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="20sp"
+                    tools:text="گردشگری علی بابا" />
+
+                <TextView
+                    android:id="@+id/shop_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    android:fontFamily="@font/iranyekan"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="12sp"
+                    tools:text="گردشگری علی بابا" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:layout_marginBottom="@dimen/dimen_small"
+                    android:background="@color/transparent">
+
+                    <com.vipulasri.ticketview.TicketView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginBottom="@dimen/dimen_small"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        app:ticketBackgroundColor="@color/white"
+                        app:ticketCornerRadius="4dp"
+                        app:ticketCornerType="rounded"
+                        app:ticketDividerColor="@color/gray_opacity"
+                        app:ticketDividerPadding="0dp"
+                        app:ticketDividerType="dash"
+                        app:ticketDividerWidth="1dp"
+                        app:ticketElevation="0dp"
+                        app:ticketOrientation="horizontal"
+                        app:ticketScallopPositionPercent="24"
+                        app:ticketScallopRadius="8dp"
+                        app:ticketShowBorder="false"
+                        app:ticketShowDivider="true" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.24" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/purchase_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_medium"
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:text="شارژ ۱۰۰ هزار تومانی"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/credit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/purchase_title"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/iranyekan"
+                            android:text="معتبر تا ۲۰ آذر ۹۹"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/manex_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/purchase_title"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="@dimen/dimen_medium"
+                            android:fontFamily="@font/iranyekan"
+                            android:text="۱۰۰ منکس کسب شده"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/guideline">
+
+                        <TextView
+                            android:id="@+id/condition_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_medium"
+                            android:layout_marginTop="23dp"
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:text="شرایط استفاده از شارژ"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="16sp" />
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/condition_title"
+                            android:layout_above="@+id/charge_layout">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.baman.manex.controls.NumberedTextList
+                                    android:id="@+id/text_list"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="@dimen/dimen_medium"
+                                    android:layout_marginTop="@dimen/dimen_small"
+                                    android:layout_marginEnd="@dimen/dimen_medium"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                        </androidx.core.widget.NestedScrollView>
+
+                        <RelativeLayout
+                            android:id="@+id/charge_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_medium"
+                                android:background="@drawable/background_button_border_primary_3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/voucher_code_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_medium"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:fontFamily="@font/iranyekan_bold"
+                                    android:gravity="center"
+                                    android:text="کد شارژ"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:textSize="20sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/voucher_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/dimen_medium"
+                                    android:layout_toEndOf="@+id/voucher_code_title"
+                                    android:fontFamily="@font/iranyekan_bold"
+                                    android:gravity="start"
+                                    android:paddingRight="5dp"
+                                    android:text="TAPSIFORBAMAN"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                        android:id="@+id/title_text"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginTop="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginEnd="@dimen/dimen_medium"-->
+                <!--                        android:fontFamily="@font/iranyekan_bold"-->
+                <!--                        android:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان"-->
+                <!--                        android:textColor="@color/colorTextPrimary"-->
+                <!--                        android:textSize="20sp"-->
+
+                <!--                        tools:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان" />-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="@dimen/dimen_small"-->
+                <!--                        android:layout_marginStart="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginEnd="@dimen/dimen_medium">-->
+
+                <!--                        <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                            android:id="@+id/subtitle_text"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentStart="true"-->
+                <!--                            android:fontFamily="@font/iranyekan"-->
+                <!--                            android:text="امکان استفاده در ۲۰ سفر"-->
+                <!--                            android:textColor="@color/colorTextPrimary"-->
+                <!--                            android:textSize="@dimen/font_size_small"-->
+
+                <!--                            tools:text="امکان استفاده در ۲۰ سفر" />-->
+
+                <!--                        <LinearLayout-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentEnd="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:orientation="horizontal">-->
+
+                <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                                android:id="@+id/voucher_manex_count"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_gravity="center"-->
+                <!--                                android:fontFamily="@font/iranyekan_bold"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:text="۱۳"-->
+                <!--                                android:textColor="@color/colorPrimary"-->
+                <!--                                android:textSize="14sp"-->
+
+                <!--                                tools:text="13" />-->
+
+                <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_gravity="center"-->
+                <!--                                android:fontFamily="@font/iranyekan"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:text=" منکس"-->
+                <!--                                android:textColor="@color/colorTextPrimary"-->
+                <!--                                android:textSize="@dimen/font_size_small" />-->
+
+                <!--                            <ImageView-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_gravity="center"-->
+                <!--                                android:layout_marginStart="4dp"-->
+                <!--                                android:layout_marginTop="2dp"-->
+                <!--                                app:srcCompat="@drawable/ic_manex_coin_10dp" />-->
+
+                <!--                        </LinearLayout>-->
+
+                <!--                    </RelativeLayout>-->
+
+                <!--                    <View-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="1.5dp"-->
+                <!--                        android:layout_marginStart="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginEnd="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginTop="@dimen/dimen_medium"-->
+                <!--                        android:background="@drawable/dashed_line_background_view"-->
+                <!--                        android:layout_gravity="center"/>-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:layout_marginTop="@dimen/dimen_medium"-->
+                <!--                        android:fontFamily="@font/iranyekan_bold"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="@string/discount_code"-->
+                <!--                        android:textColor="@color/colorTextPrimary"-->
+                <!--                        android:textSize="20sp" />-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_margin="@dimen/dimen_medium"-->
+                <!--                        android:background="@drawable/background_button_border_primary_3">-->
+
+                <!--                        <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                            android:id="@+id/copy_layout"-->
+                <!--                            android:layout_width="54dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentEnd="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_margin="@dimen/dimen_small"-->
+                <!--                            android:background="@drawable/background_button_details"-->
+                <!--                            android:fontFamily="@font/iranyekan_bold"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:paddingStart="@dimen/dimen_medium"-->
+                <!--                            android:paddingTop="@dimen/dimen_small"-->
+                <!--                            android:paddingEnd="@dimen/dimen_medium"-->
+                <!--                            android:paddingBottom="@dimen/dimen_small"-->
+                <!--                            android:text="کپی"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="@dimen/font_size_small" />-->
+
+                <!--                        <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                            android:id="@+id/discount_code"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginStart="@dimen/dimen_small"-->
+                <!--                            android:fontFamily="@font/iranyekan_bold"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="TAPCFORMANEX"-->
+                <!--                            android:textColor="@color/colorPrimaryDark"-->
+                <!--                            android:textSize="@dimen/font_size_medium" />-->
+
+                <!--                    </RelativeLayout>-->
+
+                <!--                </LinearLayout>-->
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="8dp"-->
+
+                <!--                    android:background="@drawable/background_servicedetail_bigdivider" />-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    android:background="@color/white">-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_margin="@dimen/dimen_medium"-->
+                <!--                        android:fontFamily="@font/iranyekan_bold"-->
+                <!--                        android:text="@string/purchase_term_of_use"-->
+                <!--                        android:textColor="@color/colorTextPrimary"-->
+                <!--                        android:textSize="@dimen/font_size_medium" />-->
+
+                <!--                    <com.baman.manex.controls.NumberedTextList-->
+                <!--                        android:id="@+id/discount_condition"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginTop="@dimen/dimen_small"-->
+                <!--                        android:layout_marginEnd="@dimen/dimen_medium"-->
+                <!--                        android:layout_marginBottom="@dimen/dimen_small"-->
+                <!--                        app:indicatorType="bullet"-->
+                <!--                        android:textSize="@dimen/font_size_small"-->
+                <!--                        android:textColor="@color/colorTextPrimary"/>-->
+
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/double_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/copy_button"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="2"
+                android:background="@drawable/background_button_common"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="کپی کردن کد شارژ"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shop_button"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_border_primary_3"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

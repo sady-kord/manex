@@ -1,0 +1,239 @@
+<resources>
+    <string name="app_name">Manex</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBv-4ZVaRbQgKBtBAKKX6d8e-Vxmizm5Ms</string>
+
+    <string name="manex">منکس</string>
+
+
+    <string name="bottom_nav_item_main">صفحه اصلی</string>
+    <string name="bottom_nav_item_earn">کسب منکس</string>
+    <string name="bottom_nav_item_burn">خرج منکس</string>
+    <string name="bottom_nav_item_profile">حساب کاربری</string>
+
+
+    <string name="your_referral_code">کد معرف شما</string>
+
+    <string name="referral_code">کد معرف :</string>
+    <string name="cancel">انصراف</string>
+    <string name="check_and_confirm">بررسی و تایید</string>
+    <string name="about">درباره</string>
+
+
+    <string name="choose_sort">مرتب سازی</string>
+
+
+    <!-- Guide Activity -->
+    <string name="loremipsum_300char">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده</string>
+
+
+    <string name="please_waiting">لطفا منتظر باشید ...</string>
+    <string name="button_close">بستن</string>
+    <string name="verifycardpayment_message">کارت شما تایید اعتبار شد.</string>
+
+
+    <!-- Deep Linking -->
+    <string name="deep_linking_host">manex</string>
+    <string name="deep_linking_path_add_card">/payment/addcard</string>
+    <string name="deep_linking_path_buy_voucher">/payment/buyvoucher</string>
+    <string name="deep_linking_path_failure">/payment/failure</string>
+
+    <!-- Startup Activity -->
+    <string name="startup_no_internet">دسترسی به مرکز امکان‌پذیر نیست!</string>
+
+    <!--voucherCode Activity-->
+    <string name="share_choosertitle">ارسال از طریق</string>
+    <string name="invitefrined_share_failuremessage">هیچ برنامه‌ای جهت اشتراک‌گذاری وجود ندارد.</string>
+
+    <string name="show_more">مشاهده بیشتر</string>
+
+<!--    فعلی شما-->
+    <string name="main_subtitle">موجودی</string>
+
+
+    <string name="onlineadapteritem_subtitle_format">کسب %s منکس</string>
+    <string name="amount_format">%s تومان</string>
+    <string name="manex_format">%s مَنِکس</string>
+    <string name="mytransaction_burn_format">در ازای %s منکس از مبلغ کلی کسر گردیده است.</string>
+    <string name="mytransaction_cancel_format">در صورت عدم کنسلی سفارش، %s منکس در تاریخ %s برای شما فعال خواهد گردید.</string>
+    <string name="onlineadapteritem_burn_subtitle_format">هر %s منکس</string>
+    <string name="manexstoreadapteritem_subtitle_format">%s منکس</string>
+    <string name="voucheradapteritem_subtitle_format">%s</string>
+    <string name="tap30_amount">خرید شارژ تپسی به ارزش %s</string>
+    <string name="tick_amount">بلیط سینما از ایران تیک به ارزش %s</string>
+
+
+    <string name="filter_feature">فیلتر</string>
+    <string name="sort_feature">مرتب سازی</string>
+    <string name="search_feature">جستجو</string>
+    <string name="earn_online_activity_title">خدمات آنلاین</string>
+    <string name="burn_manex">خرج منکس</string>
+    <string name="earn_local_store_title">کسب حضوری منکس</string>
+    <string name="adapter_showmore_more">مشاهده موارد بیشتر (%s)</string>
+    <string name="offlinestoresearch_listheader_address">نتیجه در جستجوی محله</string>
+    <string name="offlinestoresearch_listheader_name">نتیجه در جستجوی نام</string>
+    <string name="list_result_basic">لیست پایه</string>
+    <string name="map">نقشه</string>
+    <string name="filter_salable_for_you">قابل خرید برای شما در حال حاضر</string>
+    <string name="basefilter_pagetitle">فیلتر</string>
+
+    <string name="locationdetails_showmore_title">اطلاعات بیشتر فروشگاه</string>
+    <string name="locationdetails_showless_title">بستن اطلاعات بیشتر</string>
+
+
+    <string name="specifications_showmore_title">اطلاعات بیشتر کالا</string>
+    <string name="specifications_showless_title">بستن اطلاعات بیشتر</string>
+
+
+    <string name="editprofile_name">نام</string>
+    <string name="editprofile_family">نام خانوادگی</string>
+    <string name="editprofile_gender">جنسیت</string>
+    <string name="editprofile_birthday">تاریخ تولد</string>
+    <string name="editprofile_job">شغل</string>
+    <string name="editprofile_email">ایمیل</string>
+    <string name="term_of_earn_manex">شرایط کسب منکس</string>
+    <string name="term_of_burn_manex">شرایط خرج منکس</string>
+    <string name="onlineservicedetail_description_secondpart_format">با خرج %s منکس</string>
+    <string name="onlineservicedetail_description_secondpart_earn_format">کسب %s منکس</string>
+    <string name="female">زن</string>
+    <string name="male">مرد</string>
+    <string name="undef">تعین نشده</string>
+
+    <string name="onlineservicedetail_button_format">خرید از %s و دریافت منکس</string>
+    <string name="earnlocalstore_otherbranch_title">سایر شعب</string>
+    <string name="earnlocalstoredetail_showmoreotherbranch">مشاهده بیشتر سایر شعب</string>
+    <string name="earnlocalstoredetail_nootherbranch">شعبه دیگری وجود ندارد</string>
+    <string name="earnlocalstore_nearbybranch_title">فروشگاه های مشابه نزدیک شما</string>
+    <string name="earnlocalstoredetail_showmorenearbystores">مشاهده بیشتر فروشگاه های نزدیک</string>
+    <string name="specifications">مشخصات کالا</string>
+    <string name="term_of_earn_item">شرایط دریافت کالا</string>
+    <string name="add_card_for_earn_manex">ثبت کارت بانکی برای کسب منکس</string>
+
+
+    <string name="manex_plus_notif">اعلام</string>
+    <string name="manex_plus_start">شروع</string>
+
+
+    <string name="burnstoremanexdetail_button_format">برای خرید %s منکس دیگر نیاز دارید</string>
+    <string name="burnvoucherdetail_button_format">برای خرید %s منکس دیگر نیاز دارید</string>
+    <string name="gift_card_term_of_use">شرایط استفاده کارت هدیه</string>
+
+    <string name="burnstoremanexdetail_buy_button_format">خرید  قطعی با %s منکس</string>
+    <string name="burnvoucherdetail_buy_button_format">خرید  قطعی با %s منکس</string>
+    <string name="earnvoucherdetail_buy_button_format">خرید %s و دریافت منکس</string>
+    <string name="mytransaction_title">لیست تراکنش های من</string>
+
+    <string name="gift_card">کارت هدیه</string>
+    <string name="manex_store">فروشگاه آنلاین بامن</string>
+    <string name="my_shopping_list">لیست خریدهای من</string>
+    <string name="my_city">شهر من</string>
+    <string name="night_mode">حالت شب</string>
+    <string name="manex_exit">خروج از منکس</string>
+    <string name="setting">تنظیمات</string>
+    <string name="choose_city">انتخاب شهر</string>
+    <string name="discount_code">کد تخفیف</string>
+    <string name="purchase_term_of_use">شرایط استفاده کد تخفیف</string>
+    <string name="add_card_with_transaction">ثبت کارت از طریق تراکنش</string>
+    <string name="special_offer">پیشنهادهای ویژه</string>
+    <string name="app_724">اپلیکیشن ۷۲۴</string>
+    <string name="add_card">ثبت کارت جدید از طریق تراکنش</string>
+    <string name="my_cards">کارت های من</string>
+    <string name="exit_manex_question">آیا می خواهید از منکس خارج شوید ؟</string>
+    <string name="no">خیر</string>
+    <string name="yes">بله</string>
+    <string name="invite_friend_card_title">منکس رو به دوستت معرفی کن</string>
+    <string name="invite_friend_card_desc">دوستان خود را به نصب منکس دعوت کنید و پس از نصب توسط آنها ۲۰۰ منکس هدیه بگرید</string>
+    <string name="invite_friend_title">دعوت از دوستان</string>
+    <string name="invite_friend_activity">فعالیت‌های شما</string>
+    <string name="used_invitation">دعوت‌های استفاده شده</string>
+    <string name="earned_manex">منکس کسب شده</string>
+    <string name="invite_count">تعداد دعوت شدنگان</string>
+    <string name="nearbybranch_title">فروشگاهای مشابه</string>
+    <string name="other_branch">سایر شعب</string>
+    <string name="coming_soon">سرویس جدید</string>
+    <string name="coming_soon_sub_title">به زودی</string>
+    <string name="lifestyleـoptimization">بهینه سازی سبد زندگی</string>
+    <string name="terms_and_condition">قوانین و مقررات</string>
+    <string name="about_manex">درباره منکس</string>
+    <string name="shop_name">نام فروشگاه</string>
+    <string name="phone_number">تلفن ثابت</string>
+    <string name="send_request">ارسال درخواست</string>
+    <string name="cooperation_request">درخواست همکاری</string>
+    <string name="editprofile_postal_code">کد پستی</string>
+    <string name="editprofile_address">آدرس</string>
+    <string name="inbox_title">پیام ها</string>
+    <string name="app_help">راهنمای اپلیکشن</string>
+    <string name="faq_user">سوالات متداول کاربران</string>
+    <string name="faq_partner">سوالات متداول همکاران</string>
+    <string name="help_and_questions_title">راهنما و سوالات متداول</string>
+    <string name="show_list">نمایش لیست</string>
+    <string name="onboarding_cancel">رد کردن</string>
+    <string name="onboarding_start">شروع کنید</string>
+    <string name="enter_your_mobile_phone">شماره همراه خود را برای دریافت کد فعالسازی وارد کنید</string>
+    <string name="register_phone_number">شماره همراه</string>
+    <string name="send_verification_code">ارسال کد فعال سازی</string>
+    <string name="question_for_no_recieving_code">کد ۴ رقمی دریافت نکردید ؟ دریافت مجدد کد  </string>
+    <string name="send_verification_code_again">ارسال مجدد کد فعال سازی</string>
+    <string name="edit_phone_number">تغییر شماره تلفن</string>
+
+    <string name="home_search_hint">به دنبال چه می‌گردید؟</string>
+    <string name="introduce_manex_video">آشنایی با منکس</string>
+    <string name="show_video">مشاهده ویدئو</string>
+    <string name="show_video_subtitle">در ۱ دقیقه منکس را بشناسید</string>
+    <string name="show_video_manex">کسب ۱۰ منکس هدیه</string>
+    <string name="manex_plus_offers">پیشنهادهای منکس‌پلاس</string>
+    <string name="offer_store_manex">پیشنهاد خرید کالا</string>
+    <string name="offer_add_card">پیشنهادهای ویژه ثبت کارت</string>
+    <string name="offer_724">استفاده از اپلیکشن ۷۲۴</string>
+    <string name="buy_internet">خرید اینترنت</string>
+    <string name="pay_bill">پرداخت قبوض</string>
+    <string name="buy_charge">خرید شارژ</string>setting
+    change loading in verificationCode
+    <string name="latest_buy">آخرین خرید‌ها</string>
+    <string name="latest_transaction">آخرین تراکنش‌ها</string>
+    <string name="offer_voucher">پیشنهاد خرید کارت هدیه</string>
+    <string name="version">نسخه</string>
+    <string name="shops_category">دسته بندی فروشگاه ها</string>
+    <string name="shops_name">نام فروشگاه ها</string>
+    <string name="choose_gender">جنسیت</string>
+    <string name="addcard_intro_title">شما به راحتی می توانید با استفاده از یکی از روش های زیر کارت بانکی خود را ثبت کنید</string>
+    <string name="addcard_intro_subtitle_1">۱.  انتخاب یکی از پیشنهادات ویژه و خرید آن از طریق درگاه بانکی</string>
+    <string name="addcard_intro_subtitle_2">۲.  انجام یک تراکنش از طریق اپلیکیشن ۷۲۴ در این صفحه</string>
+    <string name="confirm_add_card">متوجه شدم</string>
+    <string name="no_card_found">شما کارتی ثبت نکرده اید</string>
+    <string name="no_card_found_desc">شما با انجام یک تراکنش می‌توانید کارت بانکی خود را ‌ثبت نموده و در خرید‌های حضوری خود هم منکس دریافت کنید.</string>
+
+
+    <string name="no_transaction_found">شما هنوز تراکنشی انجام نداده اید</string>
+    <string name="no_transaction_found_desc">شما هیچ تراکشی تا به اینجا از پذیرندگان منکس با توجه به شرایط مورد نیاز هر فروشگاه انجام نداده‌اید</string>
+
+
+    <string name="no_transaction_found_filtered">تراکنشی یافت نشد</string>
+    <string name="no_transaction_found_desc_filtered">تراکنش مورد نظر شما یافت نشد</string>
+
+
+    <string name="no_voucher_found">شما کارت هدیه ای خرید نکرده اید</string>
+    <string name="no_voucher_found_desc">شما می‌توانید با منکس‌هایی که کسب کرده‌اید به صورت رایگان از منکس کارت هدیه بخرید</string>
+    <string name="no_item_manex_found">شما کالایی خرید نکرده اید</string>
+    <string name="no_item_manex_found_desc">شما می‌توانید با منکس‌هایی که کسب کرده‌اید به صورت رایگان از منکس کالا بخرید</string>
+    <string name="no_search_result_found">نتیجه ای یافت نشد</string>
+    <string name="no_search_found_desc">فروشگاه مورد نظر شما یافت نشد، اگر میخواهید فروشگاه دیگری را جستجو کنید</string>
+    <string name="manex_plus">منکس پلاس</string>
+    <string name="no_internet_connection">اینترنت قطع شده است</string>
+    <string name="no_internet_connection_desc">لطفا اتصالات مربوط به اینترنت خود را بررسی نموده و دوباره امتحان کنید</string>
+    <string name="again">تلاش مجدد</string>
+    <string name="copied">کپی شد</string>
+    <string name="insert_card_earn_manex">ثبت کارت بانکی و کسب منکس</string>
+    <string name="insert">ثبت</string>
+    <string name="waiting_manex_title">منکس های در انتظار</string>
+    <string name="earn_manex_status">وضعیت منکس دریافتی</string>
+    <string name="ok">فروشگاه افق کوروش</string>
+    <string name="alibaba">سایت گردشگری علی بابا</string>
+    <string name="tap30">تپسی</string>
+
+    <string name="first_search_result">جستجو در منکس</string>
+    <string name="first_search_desc">فروشگاه ها و کالا ها را جستجو کنید</string>
+    <string name="invitation_count">تعداد دعوت شدگان</string>
+    <string name="no_search_found_desc_for_transaction">تراکنش مورد نظر شما یافت نشد، اگر میخواهید تراکنش دیگری را جستجو کنید</string>
+
+</resources>

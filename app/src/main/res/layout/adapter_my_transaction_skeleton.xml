@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/dimen_extra_small"
+        android:paddingBottom="@dimen/dimen_extra_small">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/linear_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:weightSum="3"
+
+                app:layout_constraintBottom_toTopOf="@+id/linear_detail"
+                app:layout_constraintEnd_toStartOf="@+id/image_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:background="@color/gray_opacity" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/gray_opacity" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:background="@color/gray_opacity" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/gray_opacity" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/image_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+
+
+                android:layout_marginEnd="@dimen/dimen_extra_small"
+                android:background="@color/gray_opacity"
+                app:layout_constraintBottom_toTopOf="@id/linear_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/linear_data"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_color"
+                app:layout_constraintTop_toBottomOf="@id/linear_data">
+
+                <com.baman.manex.controls.NumberedTextList
+                    android:id="@+id/NumberTextList_labeled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:textSize="12sp"
+                    app:indicatorColor="@color/colorPrimary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+
+                <com.baman.manex.controls.NumberedTextList
+                    android:id="@+id/NumberTextList_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:layout_marginBottom="@dimen/dimen_small"
+                    android:orientation="vertical"
+                    android:textSize="12sp"
+                    app:indicatorColor="@color/colorPrimary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+</layout>

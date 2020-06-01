@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AE000000"
+    tools:context=".ui.home.exoVideoPlayer.VideoPlayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/icon_close_layout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/icon_close"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/icon_size_width"
+            android:layout_height="@dimen/icon_size_height"
+
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
+            android:shape="ring"
+            app:cardCornerRadius="25dp"
+
+            card_view:cardBackgroundColor="@color/black_transparent"
+            card_view:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_inner_size_width"
+                    android:layout_height="@dimen/icon_inner_size_width"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_close_white" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.potyvideo.library.AndExoPlayerView
+        android:id="@+id/andExoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:andexo_aspect_ratio="aspect_16_9"
+        app:andexo_full_screen="true"
+        app:andexo_play_when_ready="true"
+        app:andexo_resize_mode="Fit"
+        app:andexo_show_controller="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

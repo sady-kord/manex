@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/dimen_medium"
+        android:fontFamily="@font/iranyekan_bold"
+        android:text="محدوده تعداد منکس مورد نظر"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_small"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan"
+            android:text="از "
+            android:textColor="@color/filterfragment_text_item"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manex_count_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan"
+            android:text=" منکس تا "
+            android:textColor="@color/filterfragment_text_item"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manex_count_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan"
+            android:text=" منکس"
+            android:textColor="@color/filterfragment_text_item"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rsb_gravity="center"
+        app:rsb_mode="range"
+        android:layoutDirection="rtl"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        app:rsb_progress_color="@color/colorPrimary"
+        app:rsb_thumb_drawable="@drawable/filter_seekbar_shape"
+        android:rotation="180"
+        />
+
+</LinearLayout>

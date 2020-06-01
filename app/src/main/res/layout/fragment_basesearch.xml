@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchcontrol"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:background="@drawable/view_searchcontrol_background"
+            app:closeIcon="@drawable/ic_search_close"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="@id/image_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_close"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@color/transparent"
+            app:theme="@style/AppSearchView" />
+
+    <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cross" />
+
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:elevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_close" />
+
+    <TextView
+            android:id="@+id/text_tagstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/onlinestoresearch_horizontalmargin"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/iranyekan_bold"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_close"
+
+            tools:text="دسته بندی فروشگاه‌ها" />
+
+    <com.baman.manex.controls.ChoiceChipGroup
+            android:id="@+id/chipgroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxHeight="130dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_tagstitle" />
+
+
+    <View
+            android:id="@+id/divider_chips"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/onlinestoresearch_horizontalmargin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/onlinestoresearch_horizontalmargin"
+            android:background="@color/divider"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipgroup" />
+
+    <com.baman.manex.controls.CustomRecyclerView
+            android:id="@+id/custom_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/dimen_medium"
+            android:paddingTop="8dp"
+            android:paddingEnd="@dimen/dimen_medium"
+            android:paddingBottom="@dimen/dimen_medium"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_chips" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

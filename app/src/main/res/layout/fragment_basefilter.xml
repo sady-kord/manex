@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="3dp">
+
+        <ImageView
+                android:id="@+id/filter_image_close"
+                android:layout_width="17dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+
+                app:srcCompat="@drawable/ic_back_header" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_pagetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:fontFamily="@font/iranyekan_bold"
+                android:text="@string/basefilter_pagetitle"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/basefilter_pagetitle_textsize" />
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_buttons"
+            android:layout_below="@+id/header">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/filterfragment_divider_background"
+                android:orientation="vertical">
+
+            <com.baman.manex.controls.FilterManexRangeView
+                    android:id="@+id/filter_manex_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium" />
+
+            <View
+                    android:id="@+id/switch_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium"
+                    android:layout_marginTop="@dimen/dimen_small"/>
+
+            <com.baman.manex.controls.FilterSwitchView
+                    android:id="@+id/filter_switch_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
+
+            <View
+                    android:id="@+id/check_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_checkboxlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="@dimen/filter_view_margintop"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+                <com.baman.manex.controls.CheckBoxList
+                        android:id="@+id/checkbox_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp" />
+
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/month_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginTop="22dp"
+                />
+
+            <LinearLayout
+                    android:id="@+id/month_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/chip_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="@dimen/filter_view_margintop"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="ماه های سال"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+                <com.baman.manex.controls.ChoiceChipGroup
+                        android:id="@+id/filter_chipgroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_alignParentBottom="true"
+
+            android:background="@color/white"
+            android:elevation="3dp"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/button_submit"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="2"
+
+                android:background="@drawable/background_button_common"
+                android:fontFamily="@font/iranyekan_bold"
+                android:gravity="center"
+                tools:text="نمایش ۱۳۰ فروشگاه"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/button_cancel"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/background_button_filter_cancel"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="لغو فیلتر "
+                android:textColor="@color/basefilter_cancel_textcolor"
+                android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

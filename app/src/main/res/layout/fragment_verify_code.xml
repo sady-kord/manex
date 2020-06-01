@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+                name="viewModel"
+                type="com.baman.manex.ui.login.VerifyCodeViewModel" />
+
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+        <com.baman.manex.controls.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/resendCodeButton"
+                android:layout_below="@+id/toolbar"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        app:srcCompat="@drawable/ic_verify" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/iranyekan"
+                            android:gravity="center"
+                            android:text="لطفا کدی که به شماره "
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mobile_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:gravity="center"
+                            android:text="@{viewModel.phoneNumber}"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_small"
+
+                            tools:text="09122949012" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/iranyekan"
+                            android:gravity="center"
+                            android:text=" ارسال می شود را وارد کنید"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:gravity="center">
+
+                    <com.mukesh.OtpView
+                            android:id="@+id/otp_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:layout_centerInParent="true"
+                            android:itemBackground="@drawable/verify_back"
+                            android:textColor="@color/verifycode_codeinput_itemtextcolor"
+                            app:itemHeight="42dp"
+                            app:itemWidth="76dp"
+                            app:itemSpacing="4dp"
+                            app:lineColor="@color/transparent"
+                            app:lineWidth="0dp"
+                            app:itemCount="4"
+                            app:viewType="rectangle" />
+
+
+                    <com.tuyenmonkey.mkloader.MKLoader
+                            android:id="@+id/code_loading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            app:mk_color="@color/colorPrimary"
+                            app:mk_type="FishSpinner" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:text="@string/question_for_no_recieving_code"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+                android:id="@+id/resendCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_above="@+id/bottom_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:background="@drawable/background_button_details">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/send_verification_code_again"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            <com.tuyenmonkey.mkloader.MKLoader
+                    android:id="@+id/button_loading"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:mk_color="@color/white"
+                    app:mk_type="FishSpinner" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginEnd="@dimen/dimen_medium"
+                    android:background="@color/divider" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edit_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginBottom="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:gravity="center"
+                        android:text="@string/edit_phone_number"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

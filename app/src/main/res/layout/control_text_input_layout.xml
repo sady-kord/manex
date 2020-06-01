@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.baman.manex.controls.CustomTextInputLayout
+        android:id="@+id/text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColorHint="#959595"
+
+
+        app:hintTextAppearance="@style/HintInputTextAppearance"
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/HelperTextAppearance"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+
+        app:boxCornerRadiusBottomEnd="@dimen/dimen_small"
+        app:boxCornerRadiusBottomStart="@dimen/dimen_small"
+        app:boxCornerRadiusTopEnd="@dimen/dimen_small"
+        app:boxCornerRadiusTopStart="@dimen/dimen_small"
+        app:boxStrokeColor="@color/color_button_enabled">
+
+        <com.baman.manex.controls.ClearableEditText
+            android:id="@+id/clear_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sans"
+            android:inputType="number"
+            android:gravity="right"
+            android:maxLength="13"
+            android:padding="@dimen/dimen_medium"/>
+
+
+    </com.baman.manex.controls.CustomTextInputLayout>
+
+</merge>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="voucherItem"
+                type="com.baman.manex.data.dto.InvoiceDto" />
+    </data>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/dimen_extra_small"
+            android:paddingBottom="@dimen/dimen_extra_small">
+
+        <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:id="@+id/firstLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                            android:id="@+id/voucher_state"
+                            android:layout_width="4dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/state_color_item" />
+
+                    <ImageView
+                            android:id="@+id/voucher_image_logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/dimen_small"
+                            android:src="@drawable/logo_724" />
+
+                    <View
+                            android:layout_width="1.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/my_voucher_divider_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/middle_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        app:layout_constraintStart_toEndOf="@id/firstLayout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/guideline"
+                        android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/voucher_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/iranyekan"
+                            android:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small"
+
+                            tools:text="۱۰٪ تخفیف تا سقف ۲ هزار تومان" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/voucher_sub_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:text="امکان استفاده در ۲۰ سفر"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_extra_small"
+                            tools:text="امکان استفاده در ۲۰ سفر" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.68" />
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        app:layout_constraintEnd_toStartOf="@id/manex_layout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideline"
+                        android:background="@drawable/dashed_line_background_vertical" />
+
+                <LinearLayout
+                        android:id="@+id/manex_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/voucher_manex_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/iranyekan_bold"
+                                android:text="۸"
+                                android:textColor="@color/red"
+
+                                android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:fontFamily="@font/iranyekan"
+                                android:text="@string/manex"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="12sp" />
+
+                        <ImageView
+                                android:layout_width="8dp"
+                                android:layout_height="12dp"
+                                app:srcCompat="@drawable/ic_manex_coin" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/voucher_time_out"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:fontFamily="@font/iranyekan"
+                            android:text="معتبر تا ۲۰ آذر ۸۹"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_extra_small"
+
+                            tools:text="معتبر تا ۲۰ آذر ۸۹" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</layout>

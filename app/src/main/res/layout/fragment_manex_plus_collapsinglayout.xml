@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        tools:background="#1e4ed1">
+
+        <RelativeLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/image_up"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="@dimen/toolbar_height"
+            android:scaleType="center"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/collaps_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image_up"
+            android:text="@string/manex_plus"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:fontFamily="@font/iranyekan_bold"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_medium"
+            />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_mask"
+            app:srcCompat="@drawable/ic_manex_plus"
+            android:scaleType="fitXY"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manex_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="۱۳ منکس"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:fontFamily="@font/iranyekan_bold"
+            android:layout_marginBottom="@dimen/dimen_small"
+            app:layout_constraintTop_toBottomOf="@id/image_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+          />
+
+
+        <View
+            android:id="@+id/view_mask"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:background="@drawable/main_collapsinglayout_roundcorners"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

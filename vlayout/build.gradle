@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+
+
+ext {
+    bintrayRepo = 'Tangram'
+    bintrayName = 'vlayout'
+
+    publishedGroupId = project.hasProperty('GROUP') ? GROUP : ''
+    libraryName = project.hasProperty('ARTIFACT') ? ARTIFACT : ''
+    artifact = project.hasProperty('ARTIFACT') ? ARTIFACT : ''
+
+    libraryDescription = """Project vlayout is a powerfull LayoutManager extension
+ for RecyclerView, it provides a group of layouts for RecyclerView. Make it able to
+  handle a complicate situation when grid, list and other layouts in the same recyclerview."""
+
+    siteUrl = 'https://github.com/alibaba/vlayout'
+    gitUrl = 'https://github.com/alibaba/vlayout.git'
+
+    libraryVersion = project.hasProperty('VERSION_NAME') ? VERSION_NAME : ''
+
+    developerId = 'longerian'
+    developerName = 'longerian'
+    developerEmail = 'xlhongultimate@gmail.com'
+
+    licenseName = 'MIT'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        versionCode 10
+        versionName '0.1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.support.recyclerview
+    implementation deps.support.v4
+    implementation deps.support.annotations
+}
+
+
+File deployConfig = rootProject.file('deploy.gradle')
+if (deployConfig.exists()) {
+    apply from: rootProject.file('deploy.gradle')
+}
+
+deployConfig = rootProject.file('jcenterInstall.gradle')
+if (deployConfig.exists()) {
+    apply from: rootProject.file('jcenterInstall.gradle')
+}
+
+deployConfig = rootProject.file('jcenterDeploy.gradle')
+if (deployConfig.exists()) {
+    apply from: rootProject.file('jcenterDeploy.gradle')
+}

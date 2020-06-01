@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="album_name_all">All Media</string>
+
+    <string name="button_preview">پیش نمایش</string>
+    <string name="button_apply_default">ثبت</string>
+    <string name="button_apply">ثبت</string>
+    <string name="button_back">بازگشت</string>
+    <string name="photo_grid_capture">دوربین</string>
+    <string name="empty_text">عکسی موجود نیست</string>
+    <string name="button_ok">تایید</string>
+
+    <string name="error_over_count">شما فقط یک عکس میتوانید انتخاب کنید</string>
+    <string name="error_file_type">فرمت فایل ساپورت نمیشد</string>
+    <string name="error_type_conflict">لطفا یک عکس انتخاب کنید</string>
+    <string name="error_no_video_activity">برنامه ای برای نمایش ویدیو وجود ندارد</string>
+    <string name="error_over_original_size">Can\'t select the images larger than %1$d MB</string>
+    <string name="error_over_original_count">%1$d images over %2$d MB. Original will be unchecked</string>
+    <string name="button_original">Original</string>
+</resources>

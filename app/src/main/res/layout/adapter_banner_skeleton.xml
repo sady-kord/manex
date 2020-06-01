@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_small"
+
+        android:layout_marginEnd="@dimen/dimen_small"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/banner_image"
+            android:layout_width="280dp"
+            android:layout_height="120dp"
+
+            android:background="@color/gray_opacity" />
+
+        <View
+            android:layout_width="280dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:background="@color/gray_opacity" />
+
+    </LinearLayout>
+
+</layout>

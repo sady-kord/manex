@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_app_bar">
+
+    <include android:id="@+id/no_internet_layout"
+        layout="@layout/layout_no_internet_connection"
+        android:visibility="gone"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fitsSystemWindows="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:id="@+id/layout_collapsingcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+
+                android:visibility="invisible"
+                app:layout_collapseMode="pin" />
+
+
+            <com.baman.manex.controls.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+
+                android:background="@color/white"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+                app:layout_collapseMode="pin" />
+
+            <com.baman.manex.controls.Toolbar
+                android:id="@+id/pin_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:visibility="gone"
+                app:layout_collapseMode="pin">
+
+                <LinearLayout
+                    android:id="@+id/layout_pincontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+
+            </com.baman.manex.controls.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        style="@style/Tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tablayout_height"
+        android:layout_marginTop="@dimen/toolbar_height"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="3dp"
+        app:layout_anchor="@id/container"
+        app:layout_anchorGravity="bottom|center">
+
+        <RelativeLayout
+            android:id="@+id/button_single"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:background="@drawable/background_button_details"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="@string/send_verification_code" />
+
+            <com.tuyenmonkey.mkloader.MKLoader
+                android:id="@+id/loading"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:mk_color="@color/white"
+                app:mk_type="FishSpinner" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/double_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/button_direction"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_common"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="مسیریابی"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/button_call"
+                android:layout_width="0px"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/dimen_medium"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_medium"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_border_primary_3"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/iranyekan_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="تماس با فروشگاه"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_anchor="@id/container"
+                app:layout_anchorGravity="bottom|center" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

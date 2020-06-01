@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.baman.manex.ui.splash.onboarding.OnBoardingFragment"
+        android:label="OnBoarding">
+        <action
+            android:id="@+id/register"
+            app:popUpTo="@id/onBoardingFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.baman.manex.ui.login.RegisterFragment"
+        android:label="Register">
+        <action
+            android:id="@+id/verifyCode"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:destination="@id/verifyCodeFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/termsOfUserFragment"-->
+<!--        android:name="com.baman.manex.ui.terms.TermsOfUse"-->
+<!--        android:label="TermsOfUse">-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/verifyCodeFragment"
+        android:name="com.baman.manex.ui.login.VerifyCodeFragment"
+        android:label="Verify code">
+        <action
+            android:id="@+id/register"
+            app:destination="@+id/registerFragment"
+            />
+        <argument
+            android:name="tokenInput"
+            app:argType="com.baman.manex.data.dto.TokenInputDto"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_onboarding_slide_fragment"
+        android:name="com.baman.manex.ui.splash.onboarding.OnBoardingSlideFragment">
+        <action android:id="@+id/register"
+            app:destination="@+id/registerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_onboarding_last_slide"
+        android:name="com.baman.manex.ui.splash.onboarding.OnBoardingLastSlideFragment">
+        <action
+            android:id="@+id/register"
+            app:destination="@+id/registerFragment"/>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/dimen_medium"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_small"
+            android:background="@drawable/background_search_home"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:padding="0dp"
+            app:closeIcon="@drawable/ic_search_close"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@color/transparent"
+            app:queryHint="@string/home_search_hint"
+            app:searchHintIcon="@color/transparent"
+            app:searchIcon="@drawable/ic_search" />
+
+        <com.baman.manex.controls.CustomRecyclerView
+            android:id="@+id/customRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="@dimen/dimen_extra_small"
+
+            tools:listitem="@layout/adapter_voucher_code_item" />
+
+
+        <com.baman.manex.controls.TabbedList
+            android:id="@+id/tabbedlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layoutDirection="rtl"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        </com.baman.manex.controls.TabbedList>
+
+    </RelativeLayout>
+
+</layout>

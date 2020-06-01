@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.baman.manex.data.dto.ManexStoreInsideDto" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen_extra_small">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/manexstore_image_product"
+                            android:layout_width="156dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:padding="@dimen/dimen_extra_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/background_expire_time_manex_store"
+                            android:fontFamily="@font/iranyekan"
+                            android:paddingStart="@dimen/dimen_small"
+                            android:paddingTop="@dimen/dimen_extra_small"
+                            android:paddingEnd="@dimen/dimen_medium"
+                            android:paddingBottom="@dimen/dimen_extra_small"
+                            android:text="معتبر تا 20 آبان"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/manexstore_text_productname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan"
+                        android:text="هدفون بی سیم"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/font_size_small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/manexstore_text_productmodel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan_light"
+
+                        android:text="مدل redmi"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="10sp" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:background="@color/gray_opacity" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_small">
+
+                    <com.baman.manex.controls.ManexCountLabelControl
+                        android:id="@+id/manex_count_control_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/background_progress" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</layout>

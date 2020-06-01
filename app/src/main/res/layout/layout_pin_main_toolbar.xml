@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:elevation="4dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_manexcount_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:drawableEnd="@drawable/ic_manex_coin_small"
+        android:drawablePadding="@dimen/main_manexcound_collaped_drawablepadding"
+        android:fontFamily="@font/iranyekan_bold"
+        android:textColor="@color/main_manexcount_collapes_textcolor"
+        android:textSize="@dimen/main_manexcount_collaped_textsize"
+        tools:text="۱۰۸00000000"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/iranyekan_bold"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/toolbar_title_textsize"
+        app:autoSizeMaxTextSize="@dimen/toolbar_title_textsize"
+        app:autoSizeMinTextSize="@dimen/toolbar_title_textsize_min"
+        app:autoSizeTextType="uniform"/>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/white"-->
+<!--        android:elevation="3dp" />-->
+
+</RelativeLayout>

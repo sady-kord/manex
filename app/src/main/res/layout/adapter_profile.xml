@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.baman.manex.data.dto.ProfileMenuDto" />
+
+    </data>
+
+    <LinearLayout
+            android:id="@+id/base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="@{item.enabled}"
+                android:enabled="@{item.enabled}"
+                android:fontFamily="@font/iranyekan_regular"
+                android:paddingStart="@dimen/dimen_small"
+                android:paddingTop="@dimen/dimen_medium"
+                android:paddingEnd="@dimen/dimen_medium"
+                android:paddingBottom="@dimen/dimen_medium"
+                android:text="@{item.name}"
+                android:textColor="@{item.enabled ? @color/colorTextPrimary : @color/gray}"
+                android:textSize="14sp"
+                tools:text="سلامممم" />
+
+    </LinearLayout>
+
+</layout>

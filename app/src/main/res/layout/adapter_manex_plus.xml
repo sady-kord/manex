@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       android:layout_margin="@dimen/dimen_medium"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.25"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimen_small"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iranyekan"
+                android:text="ورود به منکس"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iranyekan_light"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:text="امروز اعلام ورود نکرده‌اید، اعلام کن و یک منکس بگیر!"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:gravity="start">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/earn_text_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@+id/earn_onlineservice_manexcoin_image"
+                    android:fontFamily="@font/iranyekan_light"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="کسب ۱ منکس"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="10sp"
+                    app:autoSizeMaxTextSize="10sp"
+                    app:autoSizeMinTextSize="6sp"
+
+                    app:autoSizeTextType="uniform" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/earn_onlineservice_manexcoin_image"
+                    android:layout_width="8dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_manex_coin" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/start_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".75"
+            android:background="@drawable/background_button_show_more"
+            android:fontFamily="@font/iranyekan_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/show_more_margin_start"
+            android:paddingTop="@dimen/show_more_margin_top"
+            android:paddingEnd="@dimen/show_more_margin_end"
+            android:paddingBottom="@dimen/show_more_margin_bottom"
+            android:text="@string/manex_plus_start"
+            android:textColor="@color/item_show_more_text"
+            android:textSize="12sp"
+            android:visibility="@{data ? View.VISIBLE : View.GONE}" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notif_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_weight=".75"
+            android:background="@drawable/background_manex_plus_notif"
+            android:fontFamily="@font/iranyekan_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/show_more_margin_start"
+            android:paddingTop="@dimen/show_more_margin_top"
+            android:paddingEnd="@dimen/show_more_margin_end"
+            android:paddingBottom="@dimen/show_more_margin_bottom"
+            android:text="@string/manex_plus_notif"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="@{data ? View.GONE : View.VISIBLE}"
+            tools:visibility="gone" />
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_opacity"/>
+
+    </LinearLayout>
+
+</layout>

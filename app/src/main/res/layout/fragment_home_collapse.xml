@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <com.github.florent37.arclayout.ArcLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginBottom="@dimen/dimen_medium"
+        android:elevation="0dp"
+        app:arc_cropDirection="cropOutside"
+        app:arc_height="20dp"
+        app:arc_position="bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/colorPrimary"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_small"
+                android:background="@drawable/background_search_home"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:padding="0dp"
+                app:closeIcon="@drawable/ic_search_close"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryBackground="@color/transparent"
+                app:queryHint="@string/home_search_hint"
+                app:searchHintIcon="@color/transparent"
+                app:searchIcon="@drawable/ic_search" />
+
+            <LinearLayout
+                android:id="@+id/search_linear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/dimen_medium"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:layout_marginEnd="@dimen/dimen_medium"
+                android:layout_marginBottom="@dimen/dimen_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <ImageView
+                android:id="@+id/image_icon"
+                android:layout_width="@dimen/main_appbar_coin_width"
+                android:layout_height="@dimen/main_appbar_coin_height"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="@dimen/main_appbar_expandedlayout_marginbottom"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_manexcount"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search"
+                app:srcCompat="@drawable/ic_shape" />
+
+            <TextView
+                android:id="@+id/text_manexcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/main_manexcount_margintop"
+                android:layout_marginBottom="54dp"
+                android:fontFamily="@font/iranyekan_bold"
+                android:textColor="@color/main_manexcount_textcolor"
+                android:text="۰ مَنِکس"
+                android:textSize="@dimen/main_manexcount_textsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_icon"
+                app:layout_constraintTop_toBottomOf="@id/search" />
+
+            <TextView
+                android:id="@+id/text_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/main_subtitle"
+
+                android:textColor="@color/main_subtitle_textcolor"
+                android:textSize="@dimen/main_subtitle_textsize"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_manexcount"
+                app:layout_constraintTop_toBottomOf="@id/text_manexcount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.github.florent37.arclayout.ArcLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_viewpager_height"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/adapter_burn_banner" />
+
+    </LinearLayout>
+
+</layout>

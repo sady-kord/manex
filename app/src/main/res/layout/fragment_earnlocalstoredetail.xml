@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="storeInfo"
+            type="com.baman.manex.data.dto.StoreInfoDto" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:fontFamily="@font/iranyekan_bold"
+                    android:text="@{storeInfo.name}"
+                    android:textColor="@color/black"
+
+                    android:textSize="20sp"
+                    tools:text="سایت گردشگری علی‌بابا" />
+
+
+                <TextView
+                    android:id="@+id/text_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginStart="@dimen/dimen_medium"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_medium"
+
+                    android:fontFamily="@font/iranyekan"
+                    android:text="@{storeInfo.description}"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="8sp"
+
+                    android:textSize="@dimen/font_size_small"
+                    tools:text="معتبرترین سامانه خرید اینترنتی بلیط هواپیما، قطار و اتوبوس و رزرو هتل و تور" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/dimen_medium"
+                    android:background="@color/gray_opacity" />
+
+                <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_below="@+id/feature"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:layout_height="60dp" />
+
+
+                <com.baman.manex.controls.LocationDetailsControl
+                    android:id="@+id/location_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:id="@+id/condition_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/condition_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+
+                        android:background="@drawable/background_servicedetail_bigdivider" />
+
+                    <TextView
+                        android:id="@+id/header_conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:layout_marginBottom="@dimen/dimen_small"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/term_of_earn_manex"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.baman.manex.controls.NumberedTextList
+                        android:id="@+id/term_of_earn_numberedtextlist"
+                        textList="@{storeInfo.earnManexTips}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_medium"
+                        android:layout_marginBottom="@dimen/dimen_medium"
+                        android:orientation="vertical"
+                        android:textColor="@color/colorTextPrimary"
+                        android:visibility="@{storeInfo.earnManexTips.empty ? View.GONE : View.VISIBLE}" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/otherBranch_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/otherbranch_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+
+                        android:background="@drawable/background_servicedetail_bigdivider" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/header_otherbranches"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/earnlocalstore_otherbranch_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_opacity" />
+
+                    <com.baman.manex.controls.BranchItemsView
+                        android:id="@+id/branch_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <FrameLayout
+                        android:id="@+id/frame_other_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="@dimen/dimen_medium">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/no_other_branch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/show_more_margin_start"
+                            android:paddingTop="@dimen/show_more_margin_top"
+                            android:paddingEnd="@dimen/show_more_margin_end"
+                            android:paddingBottom="@dimen/show_more_margin_bottom"
+                            android:text="@string/earnlocalstoredetail_nootherbranch"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/show_more_branch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_button_show_more"
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/show_more_margin_start"
+                            android:paddingTop="@dimen/show_more_margin_top"
+                            android:paddingEnd="@dimen/show_more_margin_end"
+                            android:paddingBottom="@dimen/show_more_margin_bottom"
+                            android:text="@string/earnlocalstoredetail_showmoreotherbranch"
+                            android:textColor="@color/item_show_more_text"
+                            android:textSize="12sp" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nearbranch_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/nearbranch_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+
+                        android:background="@drawable/background_servicedetail_bigdivider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/header_nearbranches"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_medium"
+                        android:fontFamily="@font/iranyekan_bold"
+                        android:text="@string/earnlocalstore_nearbybranch_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_medium" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_opacity" />
+
+                    <com.baman.manex.controls.OtherNearByStoreView
+                        android:id="@+id/nearByStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <FrameLayout
+                        android:id="@+id/frame_more_near_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_medium">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/show_more_near_branch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_button_show_more"
+
+                            android:fontFamily="@font/iranyekan_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/show_more_margin_start"
+                            android:paddingTop="@dimen/show_more_margin_top"
+                            android:paddingEnd="@dimen/show_more_margin_end"
+                            android:paddingBottom="@dimen/show_more_margin_bottom"
+                            android:text="@string/earnlocalstoredetail_showmorenearbystores"
+                            android:textColor="@color/item_show_more_text"
+                            android:textSize="12sp" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <com.baman.manex.controls.TickTextList
+                    sloganList="@{storeInfo.branchSlogan}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/background_servicedetail_bigdivider"
+                    android:paddingTop="@dimen/dimen_small"
+                    android:paddingBottom="@dimen/dimen_medium"
+                    android:visibility="@{storeInfo.branchSlogan.empty ? View.GONE : View.VISIBLE}" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

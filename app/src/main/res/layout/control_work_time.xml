@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iranyekan"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_weight="1"
+        tools:text="شنبه تا چهارشنبه"
+        android:gravity="start"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/time_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iranyekan"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_weight="2"
+        tools:text="10:30 تا 23:00"
+        android:gravity="start"/>
+
+
+</LinearLayout>

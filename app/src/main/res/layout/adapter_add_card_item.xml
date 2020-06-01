@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/profile_layout_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_extra_small"
+        android:background="@drawable/background_layout_profile_gradient_"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:drawableStart="@drawable/ic_bank_card"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/iranyekan_bold"
+            android:text="@string/insert_card_earn_manex"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_medium"
+            android:background="@drawable/background_layout_radius_2"
+            android:fontFamily="@font/iranyekan_bold"
+            android:paddingStart="18dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="6dp"
+            android:text="@string/insert"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+
+</layout>

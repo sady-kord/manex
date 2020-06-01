@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="transaction"
+            type="com.baman.manex.data.dto.MyTransactionDto" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="@dimen/dimen_medium"
+        android:paddingEnd="@dimen/dimen_medium">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/linear_data"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintBottom_toTopOf="@+id/linear_detail"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toEndOf="@+id/view_color"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/second_layout"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_small"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:fontFamily="@font/iranyekan"
+                            android:text="فروشگاه زنجیره‌ای افق کوروش"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_small"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:layout_marginBottom="@dimen/dimen_small"
+                            android:fontFamily="@font/iranyekan_light"
+                            android:text="۱۰ آبان ۱۳۹۸، ساعت ۰۴:۰۳"
+                            android:textColor="@color/colorTextPrimary"
+
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:layout_marginEnd="@dimen/dimen_small"
+                            android:fontFamily="@font/iranyekan"
+                            android:gravity="end"
+                            android:text="۵۰ هزارتومان"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_small"
+                            android:layout_marginEnd="@dimen/dimen_small"
+                            android:layout_marginBottom="@dimen/dimen_small"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="3dp"
+
+                                android:fontFamily="@font/iranyekan_light"
+                                android:text="در انتظار"
+
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="10sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="3dp"
+
+                                android:fontFamily="@font/iranyekan_bold"
+                                android:text="۵۵"
+                                android:textColor="@color/colorPrimary"
+
+                                android:textSize="10sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/iranyekan_light"
+
+                                android:text="منکس"
+                                android:textColor="@color/colorTextPrimary"
+
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/view_color"
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"
+
+                    android:background="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_arrow"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="@dimen/dimen_extra_small"
+
+                    android:rotation="270"
+
+                    app:layout_constraintBottom_toTopOf="@id/linear_detail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:srcCompat="@drawable/ic_arrow" />
+
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/dimen_extra_small"
+                    android:background="@color/gray_opacity"
+                    app:layout_constraintBottom_toTopOf="@id/linear_detail"
+                    app:layout_constraintEnd_toStartOf="@id/image_arrow"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/view_color"
+                    app:layout_constraintTop_toBottomOf="@id/linear_data">
+
+                    <com.baman.manex.controls.NumberedTextList
+                        android:id="@+id/NumberTextList_labeled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginTop="@dimen/dimen_small"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:textSize="12sp"
+                        app:indicatorColor="@color/colorPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+
+
+                    <com.baman.manex.controls.NumberedTextList
+                        android:id="@+id/NumberTextList_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_small"
+                        android:layout_marginEnd="@dimen/dimen_small"
+                        android:layout_marginBottom="@dimen/dimen_small"
+                        android:orientation="vertical"
+                        android:textSize="12sp"
+                        app:indicatorColor="@color/colorPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+</layout>

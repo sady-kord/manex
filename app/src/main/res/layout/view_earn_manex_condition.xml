@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout_radius_gray"
+    android:layout_marginTop="@dimen/dimen_small"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/earn_manex_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/dimen_small"
+        android:layout_marginTop="@dimen/dimen_small"
+        android:layout_marginBottom="@dimen/dimen_small"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/colorTextPrimary"
+        android:fontFamily="@font/iranyekan"
+
+        tools:text="هر ۱۰۰ هزار تومان"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dimen_small"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/earn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan_light"
+            android:textSize="@dimen/font_size_extra_small"
+            android:textColor="@color/colorTextPrimary"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manex_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan_bold"
+            android:textSize="@dimen/font_size_extra_small"
+            android:textColor="@color/colorPrimary"
+
+            tools:text="32"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iranyekan_light"
+            android:textSize="@dimen/font_size_extra_small"
+            android:textColor="@color/colorTextPrimary"
+            android:text=" منکس"/>
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="10dp"
+                app:srcCompat="@drawable/ic_manex_coin"
+                android:layout_marginStart="6dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

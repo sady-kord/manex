@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.baman.manex.data.dto.VoucherInsideDto" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginBottom="@dimen/dimen_small"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginEnd="@dimen/dimen_small"
+        android:layout_marginStart="@dimen/dimen_small">
+
+        <com.vipulasri.ticketview.TicketView
+            android:id="@+id/ticketView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:ticketBackgroundColor="@color/white"
+            app:ticketBorderColor="@color/gray_opacity"
+            app:ticketBorderWidth="0.5dp"
+            app:ticketCornerRadius="4dp"
+            app:ticketCornerType="rounded"
+            app:ticketDividerColor="@color/gray_opacity"
+            app:ticketDividerPadding="0dp"
+            app:ticketDividerType="dash"
+            app:ticketDividerWidth="1dp"
+            app:ticketElevation="3dp"
+            app:ticketOrientation="vertical"
+            app:ticketScallopPositionPercent="30"
+            app:ticketScallopRadius="5dp"
+            app:ticketShowBorder="true"
+            app:ticketShowDivider="true" />
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.74"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/voucher_image_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimen_small" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_opacity" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen_small"
+                    android:layout_marginEnd="@dimen/dimen_small"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/voucher_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/iranyekan"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textDirection="rtl"
+                        android:textSize="@dimen/font_size_small"
+                        tools:text="هایدا" />
+
+                    <TextView
+                        android:id="@+id/voucher_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_small"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/iranyekan_light"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textDirection="rtl"
+                        android:textSize="10sp"
+
+                        tools:text="ولیعصر" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/dimen_small"
+                android:layout_marginEnd="@dimen/dimen_small">
+
+                <com.baman.manex.controls.ManexCountLabelControl
+                    android:id="@+id/manex_count_control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="end"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dimen_small"
+                    android:layout_gravity="end"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/iranyekan"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="10sp"
+                        app:autoSizeMaxTextSize="10sp"
+                        app:autoSizeMinTextSize="6sp"
+                        app:autoSizeTextType="uniform"
+                        android:text="قیمت : "
+                        android:layout_gravity="end" />
+
+                    <TextView
+                        android:id="@+id/voucher_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/iranyekan_light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="10sp"
+                        app:autoSizeMaxTextSize="10sp"
+                        app:autoSizeMinTextSize="6sp"
+                        app:autoSizeTextType="uniform"
+                        tools:text="۱۰۰۰"
+                        android:layout_gravity="end" />
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/iranyekan_light"-->
+<!--                        android:gravity="end"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:textColor="@color/colorTextPrimary"-->
+<!--                        android:textSize="6sp"-->
+<!--                        app:autoSizeMinTextSize="6sp"-->
+<!--                        app:autoSizeTextType="uniform"-->
+<!--                        android:text=" تومان"-->
+<!--                        android:layout_gravity="end"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon_search_image"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/colorTextPrimary"
+                        app:srcCompat="@drawable/ic_search" />
+
+                    <View
+                        android:id="@+id/search_selector_view"
+                        android:layout_width="2dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone"
+                        android:layout_toStartOf="@id/icon_search_image"
+                        android:background="@drawable/background_feature_selected" />
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/search_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:text="@string/search_feature"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/font_size_small"
+                    android:fontFamily="@font/iranyekan"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/sort_view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:background="@color/gray_opacity" />
+
+        <RelativeLayout
+            android:id="@+id/sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon_sort_image"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:tint="@color/colorTextPrimary"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_sort" />
+
+
+                    <View
+                        android:id="@+id/sort_selector_view"
+                        android:layout_width="2dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                        android:layout_toStartOf="@id/icon_sort_image"
+
+                        android:background="@drawable/background_feature_selected" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sort_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:fontFamily="@font/iranyekan"
+                    android:text="@string/sort_feature"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:layout_marginBottom="@dimen/dimen_medium"
+            android:background="@color/gray_opacity" />
+
+        <RelativeLayout
+            android:id="@+id/filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon_filter_image"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:tint="@color/colorTextPrimary"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_filter" />
+
+
+                    <View
+                        android:id="@+id/filter_selector_view"
+                        android:layout_width="2dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentTop="true"
+                       android:visibility="gone"
+                        android:layout_toStartOf="@id/icon_filter_image"
+                        android:background="@drawable/background_feature_selected" />
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/filter_feature"
+                    android:fontFamily="@font/iranyekan"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_opacity" />
+
+</RelativeLayout>

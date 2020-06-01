@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itembuttonlistsheet_height"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:gravity="center_vertical"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="@dimen/itembuttonlistsheet_icon_size"
+        android:layout_height="@dimen/itembuttonlistsheet_icon_size"
+        android:layout_marginStart="@dimen/itembuttonlistsheet_icon_marginstart"
+
+        tools:src="@drawable/ic_coins"
+        />
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/itembuttonlistsheet_label_marginstart"
+        android:layout_marginEnd="@dimen/itembuttonlistsheet_label_marginend"
+        android:textSize="20sp"
+        android:fontFamily="@font/iranyekan_bold"
+        android:textColor="@color/colorTextPrimary"
+        android:maxLines="1"
+        android:ellipsize="end"
+
+        tools:text="در این شام سیه"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

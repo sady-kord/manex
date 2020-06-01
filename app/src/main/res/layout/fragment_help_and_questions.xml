@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.baman.manex.controls.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+
+        <RelativeLayout
+            android:id="@+id/help_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_medium"
+            android:background="@drawable/background_inbox_adapter">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_image_help"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_small"
+                android:tint="@color/gray"
+                app:srcCompat="@drawable/ic_arrow" />
+
+            <View
+                android:id="@+id/divider_help"
+                android:layout_width="1dp"
+                android:layout_height="46dp"
+                android:layout_toStartOf="@id/arrow_image_help"
+                android:background="@color/inbox_divider" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_medium"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/divider_help"
+                android:fontFamily="@font/iranyekan"
+                android:text="@string/app_help"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_small" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/faq_user_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_inbox_adapter">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_image_faq"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_small"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_arrow" />
+
+            <View
+                android:id="@+id/divider_faq"
+                android:layout_width="1dp"
+                android:layout_height="46dp"
+                android:layout_toStartOf="@id/arrow_image_faq"
+                android:background="@color/inbox_divider" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_medium"
+                android:layout_toStartOf="@id/divider_faq"
+                android:fontFamily="@font/iranyekan"
+
+                android:layout_centerVertical="true"
+                android:text="@string/faq_user"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/font_size_small" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/faq_partner_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_inbox_adapter">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_image"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_small"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_arrow" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="46dp"
+                android:layout_toStartOf="@id/arrow_image"
+                android:background="@color/inbox_divider" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_medium"
+                android:layout_toStartOf="@id/divider"
+
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iranyekan"
+                android:text="@string/faq_partner"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/font_size_small" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>

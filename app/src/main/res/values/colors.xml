@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1e4ed1</color>
+    <color name="colorPrimaryDark">#0031af</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorTextPrimary">#212121</color>
+
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="black">#000000</color>
+    <color name="black_transparent">#39CCCCCC</color>
+    <color name="gray">#858585</color>
+    <color name="gray_opacity">#48858585</color>
+    <color name="skeleton">#eeeeee</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#FF0000</color>
+
+    <color name="background">#fafafa</color>
+
+    <color name="transparentLoading">#1D000000</color>
+    <!--    <color name="systembars_translucent">#5000</color>-->
+
+    <color name="text_color">#707070</color>
+    <color name="text_color_item">#7d7d7d</color>
+    <color name="text_hint">#d6d6d6</color>
+
+    <color name="dot_dark">@color/white</color>
+    <color name="dot_light">#80FFFFFF</color>
+
+    <color name="color_button_enabled">#189be9</color>
+    <color name="color_button_insert_card">#1e4ed1</color>
+
+    <!-- Search View -->
+    <color name="snack_backgroundcolor_default">#de000000</color>
+    <color name="snack_messagecolor_default">@color/white</color>
+    <color name="snack_titlecolor_default">@color/white</color>
+    <color name="snack_actionbutton_color">#4c69d9</color>
+    <color name="input_message_textcolor_dim">#adadad</color>
+    <color name="input_message_textcolor_success">#0f0</color>
+    <color name="input_message_textcolor_error">#f00</color>
+    <color name="search_setting_blue">#44c8f5</color>
+
+
+    <!-- Verification Code Input -->
+    <color name="verificationcodefield_textcolor_selected">#000000</color>
+    <color name="verificationcodefield_itembackground_unselected">#e0e0e0</color>
+    <color name="verificationcodefield_itembackground_error">@color/red</color>
+
+
+    <!-- Verify Code Fragment -->
+    <color name="verifycode_codeinput_itembackgroundcolor_selected">@color/colorPrimaryDark</color>
+
+    <color name="verifycode_codeinput_itemtextcolor">@color/text_color_item</color>
+
+
+    <color name="item_default_color">#22EEEEEE</color>
+    <color name="item_pressed_color">#CCCCCC</color>
+    <color name="item_activated_color">#77CEEE</color>
+    <color name="tabbedlist_title_textcolor">#212121</color>
+    <color name="tabbedlist_selected_tab_textcolor">@color/colorPrimary</color>
+    <color name="tabbedlist_tab_indicatorcolor">@color/colorPrimary</color>
+
+    <color name="item_show_more_text">#1751cf</color>
+    <color name="item_show_more_border">#1751cf</color>
+
+
+    <!-- Main Activity -->
+    <color name="main_manexcount_textcolor">@color/white</color>
+    <color name="main_subtitle_textcolor">#f2cd1a</color>
+    <color name="main_manexcount_collapes_textcolor">#212121</color>
+    <color name="main_navhost_backgroundcolor">#fafafa</color>
+    <color name="adaptertem_manexcount_textcolor">#1751cf</color>
+    <color name="adaptertem_manexcount_textcolor_completed">#2e7d32</color>
+    <color name="searchcontrol_background_stroke_color">#e0e0e0</color>
+
+    <color name="filterfragment_text_item">#616161</color>
+    <color name="filterfragment_divider_background">#e0e0e0</color>
+    <color name="divider">#e0e0e0</color>
+    <color name="details_button_disable">#a5a5a5</color>
+    <color name="like_icon">#ff2a2f</color>
+    <color name="like_icon_disable">#DBDFE6</color>
+
+
+    <color name="logo_background">#FFFFFF</color>
+
+    <!--my transaction color-->
+    <color name="earn_color">#4caf50</color>
+    <color name="cancel_color">#f44336</color>
+    <color name="wait_color">#1e4ed1</color>
+
+    <color name="manex_count_earn_item">#2e7d32</color>
+    <color name="manex_count_burn_item">#c62828</color>
+    <color name="manex_count_border_black">#616161</color>
+    <color name="manex_count_border_burn">#4ce57373</color>
+    <color name="manex_minus_color">#f44336</color>
+    <color name="manex_plus_color">#4caf50</color>
+    <color name="earn_plus_border">#4c81c784</color>
+    <color name="collapse_white_border">#4cfafafa</color>
+
+
+    <color name="list_feature_selected_color">#db5706</color>
+    <color name="colorTextDisable">#9e9e9e</color>
+    <color name="profile_text_edit">#0031af</color>
+    <color name="burn_store_slide_show_gray">#33212121</color>
+    <color name="manex_count_green">#2e7d32</color>
+
+    <color name="my_voucher_divider_color">@color/divider</color>
+    <color name="setting_dialog_cancel">#878787</color>
+    <color name="text_opacity">#88212121</color>
+
+    <color name="inbox_divider">#e7e7e7</color>
+    <color name="tap30_ticket">#2e7d32</color>
+    <color name="iran_tick_ticket">#c62828</color>
+    <color name="tap30_ticket_home">#424242</color>
+    <color name="ok_ticket_home">#c62828</color>
+    <color name="alibaba_ticket_home">#fdb813</color>
+
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_dark</item>
+        <item>@color/dot_dark</item>
+        <item>@color/dot_dark</item>
+        <item>@color/dot_dark</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_light</item>
+        <item>@color/dot_light</item>
+        <item>@color/dot_light</item>
+        <item>@color/dot_light</item>
+    </array>
+
+</resources>
